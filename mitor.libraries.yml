@@ -1,7 +1,7 @@
 # Custom module library for general purposes.
-mitor:
+mitor-footer:
   js:
-    js/mitor.js: {}
+    js/mitor-footer-section.js: {}
   css:
     component:
       css/mitor.css: {}

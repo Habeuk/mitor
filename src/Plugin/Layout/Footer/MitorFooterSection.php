@@ -1,59 +1,61 @@
 <?php
 
-namespace Drupal\mitor\Plugin\Layout\Sections;
+namespace Drupal\mitor\Plugin\Layout\Footer;
 
-use Drupal\bootstratp_style\StylesGroup\StyleGroupManager;
+use Drupal\bootstrap_styles\StylesGroup\StylesGroupManager;
 use Drupal\formatage_models\FormatageModelsThemes;
-use Drupal\formatage_models\Plugin\Layout\Section\FormatageModelsSection;
+use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
 
 /**
- * mitor hero section php
- * @Layout {
- *  id = "mitor_footer_section"
- *  label = @Translation("mitor footer section")
- *  category = @Translation("mitor")
- *  path = "layouts/sections"
- *  template = "mitor-footer-section"
- *  library = "mitor/mitorFooterSection"
- *  default_region = "content"
+ * Mitor hero section php
+ * @Layout(
+ *  id = "mitor_footer_section",
+ *  label = @Translation("mitor footer section"),
+ *  category = @Translation("mitor"),
+ *  path = "layouts/footer",
+ *  template = "mitor-footer-section",
+ *  library = "mitor/mitor-footer",
+ *  default_region = "content",
  *  regions = {
- *   "mitor_footer_site_logo" = {
- *       "label" = @Translation("mitor footer site logo")
- *   },
- *  "mitor_footer_description" = {
+ *      "mitor_footer_site_logo" = {
+ *       "label" = @Translation("mitor footer site logo"),
+ *      },
+ *      "mitor_footer_description" = {
  *       "label" = @Translation("mitor footer description")
- *   },
- *  "mitor_footer_social" = {
+ *      },
+ *      "mitor_footer_social" = {
  *       "label" = @Translation("mitor footer social")
- *   },
- *  "mitor_footer_column1_title" = {
+ *      },
+ *      "mitor_footer_column1_title" = {
  *       "label" = @Translation("mitor footer first column title")
- *   },
- *  "mitor_footer_column1_links" = {
+ *      },
+ *      "mitor_footer_column1_links" = {
  *       "label" = @Translation("mitor footer first column links")
- *   },
- *  "mitor_footer_column2_title" = {
+ *      },
+ *      "mitor_footer_column2_title" = {
  *       "label" = @Translation("mitor footer second column title")
- *   },
- *  "mitor_footer_column2_links" = {
+ *      },
+ *      "mitor_footer_column2_links" = {
  *       "label" = @Translation("mitor footer second column links")
- *   },
- *  "mitor_footer_subscribe" = {
+ *      },
+ *      "mitor_footer_subscribe" = {
  *       "label" = @Translation("mitor footer subscribe title")
- *   },
- *  "mitor_footer_subscribe_text" = {
+ *      },
+ *      "mitor_footer_subscribe_text" = {
  *       "label" = @Translation("mitor footer subscribe text")
- *   },
- *  "mitor_footer_subscribe_form" = {
+ *      },
+ *      "mitor_footer_subscribe_form" = {
  *       "label" = @Translation("mitor footer subscribe form")
- *   },
- *  "mitor_footer_copyright" = {
+ *      },
+ *      "mitor_footer_copyright" = {
  *       "label" = @Translation("mitor footer copyright")
- *   },
- *  "mitor_footer_terms" = {
+ *      },
+ *      "mitor_footer_terms" = {
  *       "label" = @Translation("mitor footer terms")
- *   }
- * }
+ *      }
+ *      
+ *  }
+ * )
  */
 
  class MitorFooterSection extends FormatageModelsSection
@@ -66,9 +68,9 @@ use Drupal\formatage_models\Plugin\Layout\Section\FormatageModelsSection;
     public function __construct(array $configuration, $pludin_id, $plugin_definition, StylesGroupManager $styleGroupManager)
     {
         // TODO auto-generated method stub
-        parent::__construct($configuration, $pludin_id, $styleGroupManager);
-        $this->pluginDefinition->set('icon', drupal_get_path('module', 'mitor') . "icons/sections/mitor-footer-section.png");
-    }
+        parent::__construct($configuration, $pludin_id, $plugin_definition, $styleGroupManager);
+        $this->pluginDefinition->set('icon', drupal_get_path('module', 'mitor') . "/icons/sections/mitor-footer-section.png");
+    }   
 
     /**
      * {@inheritdoc}
