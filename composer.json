@@ -1,0 +1,15 @@
+{
+    "name": "justinonomo/mitor",
+    "description": "A simple mitor template integration",
+    "type": "drupal-custom-module",
+    "require": {
+        "stephane888/formatage_models": "^3.2"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "justin",
+            "email": "justinonomo@gmail.com"
+        }
+    ]
+}

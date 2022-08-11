@@ -1,0 +1,7 @@
+name: mitor
+type: module
+description: A simple mitor integration
+package: Custom
+core_version_requirement: ^8 || ^9
+dependencies:
+  - formatage_models

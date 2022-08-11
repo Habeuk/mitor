@@ -1,0 +1,7 @@
+# Custom module library for general purposes.
+mitor:
+  js:
+    js/mitor.js: {}
+  css:
+    component:
+      css/mitor.css: {}
