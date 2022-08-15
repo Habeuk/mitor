@@ -9,7 +9,7 @@ use Drupal\formatage_models\Plugin\Layout\Teasers\FormatageModelsTeasers;
 /**
  * Mitor testimonial section php
  * @Layout(
- *  id = "mitor_teaser_section",
+ *  id = "mitor_testimonial_section",
  *  label = @Translation("mitor testimonial"),
  *  category = @Translation("mitor"),
  *  path = "layouts/teasers",
@@ -24,7 +24,7 @@ use Drupal\formatage_models\Plugin\Layout\Teasers\FormatageModelsTeasers;
  *       "label" = @Translation("mitor testimonial message")
  *      },
  *      "mitor_testimonial_name" = {
- *       "label" = @Translation("mitor testimonial message")
+ *       "label" = @Translation("mitor testimonial name")
  *      },
  *      "mitor_testimonial_job" = {
  *       "label" = @Translation("mitor testimonial job")

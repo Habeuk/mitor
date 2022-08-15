@@ -92,6 +92,7 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
     {
         return parent::defaultConfiguration() + [
             'css' => '',
+            'load_library' => true,
             'content' => [
                 'builder-form' => true,
                 'info' => [

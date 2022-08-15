@@ -1,9 +1,9 @@
 # Custom module library for general purposes.
 mitor-footer:
   js:
-    layout/js/footer/mitor-footer-section.js: {}
+    js/section/mitor-footer.js: {}
   css:
-    theme:
+    component:
       css/mitor-footer-section.css: {}
 
 mitor-testimonial:
@@ -11,4 +11,4 @@ mitor-testimonial:
     js/mitor-testimonial.js: {}
   css:
     theme:
-      css/mitor.css: {}
+      css/mitor-testimonial.css: {}
