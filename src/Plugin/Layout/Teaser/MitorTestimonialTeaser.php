@@ -4,7 +4,7 @@ namespace Drupal\mitor\Plugin\Layout\Teaser;
 
 use Drupal\bootstrap_styles\StylesGroup\StylesGroupManager;
 use Drupal\formatage_models\FormatageModelsThemes;
-use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
+use Drupal\formatage_models\Plugin\Layout\Teasers\FormatageModelsTeasers;
 
 /**
  * Mitor testimonial section php
@@ -12,7 +12,7 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
  *  id = "mitor_teaser_section",
  *  label = @Translation("mitor testimonial"),
  *  category = @Translation("mitor"),
- *  path = "layouts/teaser",
+ *  path = "layouts/teasers",
  *  template = "mitor-testimonial",
  *  library = "mitor/mitor-testimonial",
  *  default_region = "content",
@@ -37,7 +37,7 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
  * )
  */
 
- class MitorTestimonialSection extends FormatageModelsSection
+ class MitorTestimonialTeaser extends FormatageModelsTeasers
  {
     
     /**
@@ -70,6 +70,7 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
     public function defaultConfiguration()
     {
         return parent::defaultConfiguration() + [
+            'css' => '',
             'load_library' => true,
             "derivate" => [
                 'value' => 'simple',
