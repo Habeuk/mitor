@@ -7,7 +7,7 @@ use Drupal\formatage_models\FormatageModelsThemes;
 use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
 
 /**
- * Mitor hero section php
+ * Mitor footer section php
  * @Layout(
  *  id = "mitor_footer_section",
  *  label = @Translation("mitor footer section"),

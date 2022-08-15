@@ -5,3 +5,10 @@ mitor-footer:
   css:
     component:
       css/mitor.css: {}
+
+mitor-testimonial:
+  js:
+    js/mitor-testimonial.js: {}
+  css:
+    component:
+      css/mitor.css: {}
