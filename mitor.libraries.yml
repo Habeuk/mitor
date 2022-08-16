@@ -1,14 +1,14 @@
 # Custom module library for general purposes.
 mitor-footer:
   js:
-    js/section/mitor-footer.js: {}
+    layouts/js/section/mitor-footer.js: {}
   css:
-    component:
+    theme:
       css/mitor-footer-section.css: {}
 
 mitor-testimonial:
   js:
-    js/mitor-testimonial.js: {}
+    js/teasers/mitor-testimonial.js: {}
   css:
     theme:
       css/mitor-testimonial.css: {}
