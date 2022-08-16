@@ -12,3 +12,10 @@ mitor-testimonial:
   css:
     theme:
       css/mitor-testimonial.css: {}
+
+mitor-team:
+  js:
+    js/teasers/mitor-team.js: {}
+  css:
+    theme:
+      css/mitor-team.css: {}

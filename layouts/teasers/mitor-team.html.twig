@@ -1,0 +1,28 @@
+{% if content %}
+	<div {{ attributes.addClass('single-lutin ') }}>
+
+		{% if content.mitor_team_image %}
+			<div {{ region.attributes.mitor_team_image.addClass(['lutin-img']) }}>
+				{{ content.mitor_team_image }}
+			</div>
+		{% endif %}
+
+		<div class="lutin-content">
+			{% if content.mitor_team_name %}
+				<h6 {{ region.attributes.mitor_team_name.addClass(['lutin-name']) }}>{{content.mitor_team_name}}</h6>
+			{% endif %}
+
+			{% if content.mitor_team_job %}
+				<p {{ region.attributes.mitor_team_job.addClass(['lutin-role']) }}>{{ content.mitor_team_job }}</p>
+			{% endif %}
+
+			{% if content.mitor_team_social %}
+				<ul {{ region.attributes.mitor_team_job.addClass(['media-list ']) }}>
+					{{ content.mitor_team_social }}
+				</ul>
+			{% endif %}
+
+		</div>
+	</div>
+
+{% endif %}
