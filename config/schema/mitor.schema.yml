@@ -1,0 +1,23 @@
+field.widget.storage_setting.mitor:
+  type: maping
+  label: 'License plate storage setting'
+  maping:
+    number_max_length:
+      type: integer
+      label: 'Max length for the number'
+    code_max_length:
+      type: integer
+      label: 'Max length for the code'
+    fieldset_state:
+      type:string
+      label: 'The state of the fieldset wich contains the two felds: open/closed'
+    placeholder:
+      type: maping
+      label: 'The placeholder of the two fields'
+      maping:
+        number:
+          type: string
+          label: 'The placeholder of the number field'
+        code:
+          type: string
+          label: 'The placeholderof the code field'

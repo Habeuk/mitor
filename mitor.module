@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function mitor_theme() {
+    return [
+        'image_gallery_item_formatter' => [
+            'variables' => ['uri' => NULL,'alt' => NULL],
+            'file' => 'image.field.inc',
+            'template' => 'mitor-image-gallery-item',
+        ],
+    ];
+  }
