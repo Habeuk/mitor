@@ -7,25 +7,25 @@ use Drupal\formatage_models\FormatageModelsThemes;
 use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
 
 /**
- * Mitor Top teaser php
+ * Mitor Top project gallery php
  * @Layout(
- *  id = "mitor_team_teaser",
- *  label = @Translation("mitor team"),
+ *  id = "mitor_gallery_section",
+ *  label = @Translation("mitor gallery"),
  *  category = @Translation("mitor"),
  *  path = "layouts/sections",
- *  template = "mitor-team",
+ *  template = "mitor-gallery",
  *  library = "mitor/mitor-top-project",
  *  default_region = "content",
  *  regions = {
- *      "mitor_project_image" = {
- *       "label" = @Translation("mitor team image"),
+ *      "mitor_gallery_images" = {
+ *       "label" = @Translation("mitor galley section"),
  *      }
  *      
  *  }
  * )
  */
 
- class MitorTopProjectGallerySection extends FormatageModelsSection
+ class MitorGallerySection extends FormatageModelsSection
  {
     
     /**
@@ -60,26 +60,17 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
         return parent::defaultConfiguration() + [
             'css' => '',
             'load_library' => true,
-            "derivate" => [
-                'value' => 'default',
-                'options' => [
-                    'default' => '',
-                    'single-lutin--glassmorphism' => 'glassmorphism',
-                    'single-lutin--skeurmorphism' => 'skeurmorphism',
-                    'single-lutin--skeurmorphism flat' => 'skeurmorphism flat',
-                ],
-            ],
             'content' => [
                 'builder-form' => true,
                 'info' => [
-                    'title' => 'Team member informations',
+                    'title' => 'Gallery informations',
                     'loader' => 'static',
                 ],
                 'fields' => [
-                    'mitor_project_image' => [
+                    'mitor_gallery_images' => [
                         'text_html' => [
-                            'label' => 'project image',
-                            'value' => '<img src="http://slidesigma.com/themes/html/mitor/assets/img/project/h-project-1.jpg" alt="Tomate à la porte">',
+                            'label' => 'gallery image',
+                            'value' => '',
                         ]
                     ],
                 ],

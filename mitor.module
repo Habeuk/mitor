@@ -6,7 +6,7 @@
 function mitor_theme() {
     return [
         'image_gallery_item_formatter' => [
-            'variables' => ['uri' => NULL,'alt' => NULL],
+            'variables' => ['imageurl' => NULL,'imageThumbnailUrl' => NULL,'alt' => NULL],
             'file' => 'image.field.inc',
             'template' => 'mitor-image-gallery-item',
         ],

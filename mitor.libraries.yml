@@ -1,7 +1,7 @@
 # Custom module library for general purposes.
 mitor-footer:
   js:
-    layouts/js/section/mitor-footer.js: {}
+    js/sections/mitor-footer.js: {}
   css:
     theme:
       css/mitor-footer-section.css: {}
@@ -19,3 +19,10 @@ mitor-team:
   css:
     theme:
       css/mitor-team.css: {}
+
+mitor-gallery:
+  js:
+    js/sections/mitor-gallery.js: {}
+  css:
+    theme:
+      css/mitor-gallery.css: {}

@@ -1,0 +1,9 @@
+{% if content %}
+	<div {{ attributes.addClass('mitor-grid-img') }} {{ attibutes.addId('mitor-top-project') }}>
+
+		{% if content.mitor_project_image %}
+			{{ content.mitor_gallery_images }}
+		{% endif %}
+
+	</div>
+{% endif %}
