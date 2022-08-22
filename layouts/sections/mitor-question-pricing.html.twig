@@ -1,0 +1,30 @@
+{% if content %}
+    <div {{ attributes.addClass('pricing-question') }}>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9">
+                <div class="wrapper">
+                    {% if content.mitor_question_pricing_title %}
+                        <h6 {{ region_attributes.mitor_question_pricing_title.addClass(['title']) }}>
+                        {{ content.mitor_question_pricing_title }}
+                    </h6>
+                    {% endif %}
+
+                    {% if content.mitor_question_pricing_description %}
+                        <p {{ region_attributes.mitor_question_pricing_description.addClass(['qtext']) }}>
+                        {{ content.mitor_question_pricing_description }}
+                    </p>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-lg-3">
+                {% if content.mitor_question_pricing_button %}
+                    <div {{ region_attributes.mitor_question_pricing_button.addClass(['faqLink']) }}>
+                    {{ content.mitor_question_pricing_button }}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
