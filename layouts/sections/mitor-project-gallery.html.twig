@@ -1,0 +1,90 @@
+{% if content %}
+<section class="mitor-section-title">
+    <div class="container">
+        {% if content.mitor_project_gallery_title %}
+            <div class="section-header">
+            <h3 {{ region_attributes.mitor_project_gallery_title.addClass(['section-title']) }}>
+            
+                {{ content.mitor_project_gallery_title  }}
+            </h3>
+
+        </div>
+        {% endif %}
+        <div class="mitor-project-tab">
+            <div class="mpt-tabs">
+                <ul class="nav nav-pills expo-tabs" id="myTab" role="tablist">
+                    {% if content.mitor_project_gallery_tab_one %}
+                    <li class="nav-item">
+                        <a {{ region_attributes.mitor_project_gallery_tab_one.addClass(['nav-link', 'active']) }} id="Marketing-tab" data-toggle="tab" href="#Marketing"
+                           role="tab"
+                           aria-controls="Marketing"
+                           aria-selected="true">{{ content.mitor_project_gallery_tab_one }}</a>
+                    </li>
+                    {% endif %}
+
+                    {% if content.mitor_project_gallery_tab_two %}
+                        <li class="nav-item">
+                        <a {{ region_attributes.mitor_project_gallery_tab_two.addClass(['nav-link']) }} id="Design-tab" data-toggle="tab" href="#Design" role="tab"
+                           aria-controls="Design"
+                           aria-selected="false">{{ content.mitor_project_gallery_tab_two }}</a>
+                    </li>
+                    {% endif %}
+
+                    {% if content.mitor_project_gallery_tab_three %}
+                        <li class="nav-item">
+                        <a {{ region_attributes.mitor_project_gallery_tab_three.addClass(['nav-link']) }} id="Development-tab" data-toggle="tab" href="#Development" role="tab"
+                           aria-controls="Development" aria-selected="false">{{ content.mitor_project_gallery_tab_three }}</a>
+
+                    </li>
+                    {% endif %}
+                    
+                    {% if content.mitor_project_gallery_tab_four %}
+                        <li class="nav-item">
+                        <a {{ region_attributes.mitor_project_gallery_tab_four.addClass(['nav-link']) }}  id="Supports-tab " data-toggle="tab" href="#Supports"
+                           role="tab"
+                           aria-controls="Supports"
+                           aria-selected="false">{{ content.mitor_project_gallery_tab_four }}</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+            <div class="tab-content" id="myTabContent">
+                {% if content.mitor_project_gallery_tab_one_content %}
+                    <div {{ region_attributes.mitor_project_gallery_tab_one_content.addClass(['tab-pane', 'fade', 'show', 'active']) }} id="Marketing" role="tabpanel"
+                     aria-labelledby="Marketing-tab">
+                    <div class="row justify-content-center  no-gutters">
+                        {{ content.mitor_project_gallery_tab_one_content }}
+                    </div>
+                </div>
+                {% endif %}
+
+                {% if content.mitor_project_gallery_tab_two_content %}
+                    <div {{ region_attributes.mitor_project_gallery_tab_two_content.addClass(['tab-pane', 'fade']) }} id="Design" role="tabpanel" aria-labelledby="Design-tab">
+                    <div class="row justify-content-center no-gutters">
+                        {{ content.mitor_project_gallery_tab_two_content }}
+                    </div>
+                </div>
+                {% endif %}
+
+                {% if content.mitor_project_gallery_tab_tree_content %}
+                    <div {{ region_attributes.mitor_project_gallery_tab_tree_content.addClass(['tab-pane', 'fade']) }} id="Development" role="tabpanel" aria-labelledby="Development-tab">
+                    <div class="row justify-content-center no-gutters">
+                        {{ content.mitor_project_gallery_tab_tree_content }}
+                    </div>
+                </div>
+                {% endif %}
+
+                {% if content.mitor_project_gallery_tab_four_content %}
+                    <div {{ region_attributes.mitor_project_gallery_tab_four_content.addClass(['tab-pane', 'fade']) }} id="Supports" role="tabpanel" aria-labelledby="Supports-tab">
+                    <div class="row justify-content-center no-gutters">
+                        {{ content.mitor_project_gallery_tab_four_content }}
+                    </div>
+                </div>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+
+</section>
+{% endif %}

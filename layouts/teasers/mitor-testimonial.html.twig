@@ -1,7 +1,7 @@
 {% if content %}
 	<div {{ attributes.addClass('single-testimonial') }}>
 		{% if content.mitor_testimonial_image %}
-			<div {{ region.attributes.mitor_testimonial_image.addClass(['img-handler']) }}>
+			<div {{ region_attributes.mitor_testimonial_image.addClass(['img-handler']) }}>
 				{{ content.mitor_testimonial_image }}
 			</div>
 		{% endif %}
@@ -14,25 +14,25 @@
 				</svg>
 			</div>
 			{% if content.mitor_testimonial_message %}
-				<p {{ region.attributes.mitor_testimonial_message.addClass(['text-content']) }}>
+				<p {{ region_attributes.mitor_testimonial_message.addClass(['text-content']) }}>
 					{{ content.mitor_testimonial_message }}
 				</p>
 			{% endif %}
 
 			<div class="lutin-info">
 				{% if content.mitor_testimonial_rating %}
-                    <div {{ region.attributes.mitor_testimonial_rating.addClass(['stars']) }}>
+                    <div {{ region_attributes.mitor_testimonial_rating.addClass(['stars']) }}>
 					{{ content.mitor_testimonial_rating }}
 				</div>
                 {% endif %}
 				{% if content.mitor_testimonial_name %}
-					<div {{ region.attributes.mitor_testimonial_name.addClass(['nom']) }}>
+					<div {{ region_attributes.mitor_testimonial_name.addClass(['nom']) }}>
 						{{ content.mitor_testimonial_name }}
 					</div>
 				{% endif %}
 
 				{% if content.mitor_testimonial_job %}
-					<div {{ region.attributes.mitor_testimonial_job.addClass(['role']) }}>
+					<div {{ region_attributes.mitor_testimonial_job.addClass(['role']) }}>
 						{{ content.mitor_testimonial_job }}
 					</div>
 				{% endif %}

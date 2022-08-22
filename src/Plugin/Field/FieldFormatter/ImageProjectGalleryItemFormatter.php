@@ -11,8 +11,8 @@ use Drupal\image\Plugin\Field\FieldFormatter\ImageFormatter;
  * Plugin implementation of the 'image gallery item' formatter.
  *
  * @FieldFormatter(
- *   id = "mitor_image_gallery_item",
- *   label = @Translation("Image gallery item"),
+ *   id = "mitor_image_project_gallery_item",
+ *   label = @Translation("Image project gallery item"),
  *   field_types = {
  *     "image"
  *   },
@@ -21,7 +21,7 @@ use Drupal\image\Plugin\Field\FieldFormatter\ImageFormatter;
  *   }
  * )
  */
-class ImageGalleryItemFormatter extends ImageFormatter
+class ImageProjectGalleryItemFormatter extends ImageFormatter
 {
 
   /**
@@ -71,8 +71,7 @@ class ImageGalleryItemFormatter extends ImageFormatter
     $image_style_small_setting = $this->getSetting('image_style_small');
     $image_style = $this->imageStyleStorage->load($image_style_setting);
     $image_thumbnail_style = $this->imageStyleStorage->load($image_style_small_setting);
-    if (NULL != $files) {
-      $image_url = ImageStyle::load($image_style->get('name'))->buildUrl($files[0]->getFileUri());
+    $image_url = ImageStyle::load($image_style->get('name'))->buildUrl($files[0]->getFileUri());
     $image_thumbnail_url = ImageStyle::load($image_thumbnail_style->get('name'))->buildUrl($files[0]->getFileUri());
 
     
@@ -83,8 +82,6 @@ class ImageGalleryItemFormatter extends ImageFormatter
       $elements[$delta]['#imageThumbnailUrl'] = $image_thumbnail_url;
       $elements[$delta]['#alt'] = $alt;
     }
-    }
-    
     
     return $elements;
   }

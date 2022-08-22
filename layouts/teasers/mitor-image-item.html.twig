@@ -1,6 +1,6 @@
 {% if content %}
 	<div {{ attributes.addClass('grid-item') }}>
-		<a href="{{ content.mitor_image_link }}" {{ region.attributes.mitor_project_image.addClass('grid-img') }}>
+		<a href="{{ content.mitor_image_link }}" {{ region_attributes.mitor_project_image.addClass('grid-img') }}>
 			{% if content.mitor_image %}
 				{{ content.mitor_image }}
 			{% endif %}

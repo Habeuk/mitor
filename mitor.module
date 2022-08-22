@@ -10,5 +10,10 @@ function mitor_theme() {
             'file' => 'image.field.inc',
             'template' => 'mitor-image-gallery-item',
         ],
+        'mitor_image_project_gallery_item' => [
+            'variables' => ['imageurl' => NULL,'imageThumbnailUrl' => NULL,'alt' => NULL],
+            'file' => 'image.field.inc',
+            'template' => 'mitor-image-project-gallery-item',
+        ],
     ];
   }

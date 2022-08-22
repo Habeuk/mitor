@@ -26,3 +26,10 @@ mitor-gallery:
   css:
     theme:
       css/mitor-gallery.css: {}
+
+mitor-our-project:
+  js:
+    js/sections/mitor-our-project.js: {}
+  css:
+    theme:
+      css/mitor-our-projecty.css: {}
