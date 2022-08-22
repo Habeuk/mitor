@@ -18,7 +18,7 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
  *  default_region = "content",
  *  regions = {
  *      "mitor_gallery_images" = {
- *       "label" = @Translation("mitor galley section"),
+ *       "label" = @Translation("mitor gallery section"),
  *      }
  *      
  *  }
@@ -70,7 +70,43 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
                     'mitor_gallery_images' => [
                         'text_html' => [
                             'label' => 'gallery image',
-                            'value' => '',
+                            'value' => '<div class="grid-item  ">
+                            <a href="http://slidesigma.com/themes/html/mitor/assets/img/project/h-project-1.jpg" class="grid-img">
+                                <img src="http://slidesigma.com/themes/html/mitor/assets/img/project/h-project-1.jpg"
+                                     alt="Tomate à la porte">
+                            </a>
+                        </div>
+                        <div class="grid-item  ">
+                            <a href="http://slidesigma.com/themes/html/mitor/assets/img/project/h-project-2.jpg" class="grid-img">
+                                <img src="http://slidesigma.com/themes/html/mitor/assets/img/project/h-project-2.jpg" alt="image">
+                            </a>
+                        </div>
+                        <div class="grid-item  ">
+                            <a
+                               href="https://static6.depositphotos.com/1003369/659/i/600/depositphotos_6591667-stock-photo-close-up-of-beautiful-womanish.jpg"
+                               class="grid-img">
+                                <img src="https://static6.depositphotos.com/1003369/659/i/600/depositphotos_6591667-stock-photo-close-up-of-beautiful-womanish.jpg"
+                                     alt="image">
+                            </a>
+                        </div>
+                        <div class="grid-item  ">
+                            <a href="http://slidesigma.com/themes/html/mitor/assets/img/project/h-project-4.jpg" class="grid-img">
+                                <img src="http://slidesigma.com/themes/html/mitor/assets/img/project/h-project-4.jpg"
+                                     alt="Gift me the">
+                            </a>
+                        </div>
+            
+                        <div class="grid-item  ">
+                            <a href="http://slidesigma.com/themes/html/mitor/assets/img/project/h-project-5.jpg" class="grid-img">
+                                <img src="http://slidesigma.com/themes/html/mitor/assets/img/project/h-project-5.jpg" alt="image">
+                            </a>
+                        </div>
+            
+                        <div class="grid-item  ">
+                            <a href="http://slidesigma.com/themes/html/mitor/assets/img/project/h-project-1.jpg" class="grid-img">
+                                <img src="http://slidesigma.com/themes/html/mitor/assets/img/project/h-project-1.jpg" alt="image">
+                            </a>
+                        </div>',
                         ]
                     ],
                 ],

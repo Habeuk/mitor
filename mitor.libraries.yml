@@ -33,3 +33,10 @@ mitor-our-project:
   css:
     theme:
       css/mitor-our-projecty.css: {}
+
+mitor-top-project:
+  js:
+    js/sections/mitor-top-project.js: {}
+  css:
+    theme:
+      css/mitor-top-project.css: {}

@@ -9,8 +9,8 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
 /**
  * Mitor Top project gallery php
  * @Layout(
- *  id = "mitor_gallery_section",
- *  label = @Translation("mitor gallery"),
+ *  id = "mitor_project_gallery_section",
+ *  label = @Translation("mitor project gallery"),
  *  category = @Translation("mitor"),
  *  path = "layouts/sections",
  *  template = "mitor-project-gallery",
