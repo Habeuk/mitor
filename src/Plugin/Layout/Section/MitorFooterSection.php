@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\mitor\Plugin\Layout\Footer;
+namespace Drupal\mitor\Plugin\Layout\Section;
 
 use Drupal\bootstrap_styles\StylesGroup\StylesGroupManager;
 use Drupal\formatage_models\FormatageModelsThemes;
@@ -12,7 +12,7 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
  *  id = "mitor_footer_section",
  *  label = @Translation("mitor footer section"),
  *  category = @Translation("mitor"),
- *  path = "layouts/footer",
+ *  path = "layouts/sections",
  *  template = "mitor-footer-section",
  *  library = "mitor/mitor-footer",
  *  default_region = "content",

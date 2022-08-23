@@ -1,0 +1,30 @@
+{% if content %}
+	<section {{ attributes.addClass('mitor-404-section-handler') }}>
+		<div class="container">
+			<div class="msg-404">
+				{% if content.mitor_not_found_image %}
+					<div {{ region_attributes.mitor_not_found_image.addClass(['img-404-handler']) }}>
+						{{ content.mitor_not_found_image }}
+					</div>
+				{% endif %}
+				<div class="content">
+					<h6 class="title">
+						{% if content.mitor_not_found_title %}
+							{{ content.mitor_not_found_title }}
+						{% endif %}
+
+						{% if content.mitor_not_found_try_again %}
+							{{ content.mitor_not_found_try_again }}
+						{% endif %}
+					</h6>
+					{% if content.mitor_not_found_back_to_home_button %}
+						<div {{ region_attributes.mitor_not_found_back_to_home_button.addClass(['backhome']) }}>
+							{{ content.mitor_not_found_back_to_home_button }}
+						</div>
+					{% endif %}
+				</div>
+
+			</div>
+		</div>
+	</section>
+{% endif %}
