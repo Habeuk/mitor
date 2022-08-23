@@ -1,7 +1,7 @@
 # Custom module library for general purposes.
 mitor-footer:
   js:
-    js/mitor-footer.js: {}
+    js/footer/mitor-footer.js: {}
   css:
     theme:
       css/mitor-footer.css: {}
@@ -47,3 +47,10 @@ mitor-question-pricing:
   css:
     theme:
       css/mitor-question-pricing.css: {}
+      
+mitor-why-us:
+  js:
+    js/teasers/mitor-why-us.js: {}
+  css:
+    theme:
+      css/mitor-why-us.css: {}

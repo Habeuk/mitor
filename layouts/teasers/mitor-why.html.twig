@@ -1,0 +1,16 @@
+{% if content %}
+    <div {{ attributes.addClass('proposition') }}>
+        {% if content.mitor_why_icon %}
+            <span class="svg-handler">
+            <p {{ region_attributes.mitor_why_icon.addClass(['svg']) }}>
+                {{ content.mitor_why_icon }}
+            </p>
+        </span>
+        {% endif %}
+        {% if content %}
+            <div {{ region_attributes.mitor_why_message.addClass(['service-proposition']) }}>
+                {{ content.mitor_why_message }}
+        </div>
+        {% endif %}
+    </div>
+{% endif %}

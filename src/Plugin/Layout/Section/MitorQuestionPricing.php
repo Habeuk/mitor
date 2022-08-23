@@ -69,7 +69,7 @@ class MitorQuestionPricing extends FormatageModelsSection
             'content' => [
                 'builder-form' => true,
                 'info' => [
-                    'title' => 'Gallery informations',
+                    'title' => 'Question pricing informations',
                     'loader' => 'static',
                 ],
                 'fields' => [

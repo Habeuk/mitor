@@ -25,7 +25,7 @@
 				<div class="col-lg-3 col-md-5 footer-column">
 					{% if content.mitor_footer_column1_title %}
 						<div {{ region_attributes.mitor_footer_column1_title.addClass(['head-element']) }}>
-							<p>{{ content.mitor_footer_column1_title }}</p>
+							<p>{{ content.testimonialmitor_footer_column1_title }}</p>
 						</div>
 					{% endif %}
 
@@ -76,7 +76,7 @@
 			<div class="copyright text-center row">
 				{% if content.mitor_footer_copyright %}
 					<div {{ region_attributes.mitor_footer_copyright.addClass(['col-md-4', 'pb-5', 'p-sm-0', 'text-left']) }}>
-						{{ mitor.mitor_footer_copyright }}
+						{{ content.mitor_footer_copyright }}
 					</div>
 				{% endif %}
 
