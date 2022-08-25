@@ -61,3 +61,10 @@ mitor-not-found:
   css:
     theme:
       css/mitor-why-us.css: {}
+      
+mitor-newsletter:
+  js:
+    js/teasers/mitor-newsletter.js: {}
+  css:
+    theme:
+      css/mitor-newsletter.css: {}

@@ -1,0 +1,26 @@
+{% if content %}
+	<section {{ attributes.addClass('mitor-newsletter-handler') }}>
+		<div class="container">
+			<div class="section-title">
+				{% if content.mitor_newsletter_title %}
+					<h3 {{ region_attributes.mitor_newsletter_title.addClass(['title']) }}>
+						{{ content.mitor_newsletter_title }}
+					</h3>
+				{% endif %}
+				{% if content.mitor_newsletter_description %}
+					<p {{ region_attributes.mitor_newsletter_description.addClass(['message']) }}>
+						{{ content.mitor_newsletter_description }}
+					</p>
+				{% endif %}
+			</div>
+
+			{% if content.mitor_newsletter_form %}
+                {{ content.mitor_newsletter_form }}
+            {% endif %}
+
+			{% if content.mitor_newsletter_social_links %}
+                {{ content.mitor_newsletter_social_links }}
+            {% endif %}
+		</div>
+	</section>
+{% endif %}
