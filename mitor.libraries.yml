@@ -68,3 +68,17 @@ mitor-newsletter:
   css:
     theme:
       css/mitor-newsletter.css: {}
+
+mitor/salon-dessange-actu:
+  js:
+    js/teasers/salon-dessange-actu.js: {}
+  css:
+    theme:
+      css/salon-dessange-actu.css: {}
+
+mitor/salon-dessange-actu-section:
+  js:
+    js/teasers/salon-dessange-actu-section.js: {}
+  css:
+    theme:
+      css/salon-dessange-actu-section.css: {}

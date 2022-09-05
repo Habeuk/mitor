@@ -1,0 +1,30 @@
+{% if content %}
+	<div {{ attributes.addClass('sd-actus-section') }}>
+		<div class="container ">
+			{% if content.salon_dessange_actu_section_title %}
+				<h2 {{ region_attributes.salon_dessange_actu_section_title.addClass(['sdt-title']) }}>
+					{{ content.salon_dessange_actu_section_title }}
+				</h2>
+			{% endif %}
+
+			<div class="row justify-content-center">
+				{% if content.salon_dessange_actu_section_first_teaser %}
+					<div {{ region_attributes.salon_dessange_actu_section_first_teaser.addClass(['col-md-6']) }}>
+						{{ content.salon_dessange_actu_section_first_teaser }}
+					</div>
+				{% endif %}
+
+				<div class="col-md-6">
+
+					{% if content.salon_dessange_actu_section_see_all %}
+						{{ content.salon_dessange_actu_section_see_all }}
+					{% endif %}
+
+					{% if content.salon_dessange_actu_section_second_teaser %}
+						{{ content.salon_dessange_actu_section_second_teaser }}
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+{% endif %}

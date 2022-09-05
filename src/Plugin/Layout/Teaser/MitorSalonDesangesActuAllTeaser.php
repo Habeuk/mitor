@@ -9,25 +9,26 @@ use Drupal\formatage_models\Plugin\Layout\Teasers\FormatageModelsTeasers;
 /**
  * Mitor why us section php
  * @Layout(
- *  id = "mitor_why_teaser",
- *  label = @Translation("mitor why us teaser"),
- *  category = @Translation("mitor"),
+ *  id = "mitor_salon_dessange_actu_all_teaser",
+ *  label = @Translation("Salon Dessange Actu Teaser"),
+ *  category = @Translation("salon dessange"),
  *  path = "layouts/teasers",
- *  template = "mitor-why",
- *  library = "mitor/mitor-why-us",
- *  default_region = "content",
+ *  template = "salon-dessange-actu-all-teaser",
  *  regions = {
- *      "mitor_why_icon" = {
- *       "label" = @Translation("mitor why icon"),
+ *      "salon_dessange_actu_all_teaser_title" = {
+ *       "label" = @Translation("Titre"),
  *      },
- *      "mitor_why_message" = {
- *       "label" = @Translation("mitor why message")
+ *      "salon_dessange_actu_all_teaser_link" = {
+ *       "label" = @Translation("Lien"),
+ *      },
+ *      "salon_dessange_actu_all_teaser_icon" = {
+ *       "label" = @Translation("icone"),
  *      }
  *  }
  * )
  */
 
- class MitorWhyTeaser extends FormatageModelsTeasers
+ class MitorSalonDesangesActuAllTeaser extends FormatageModelsTeasers
  {
     
     /**
@@ -38,7 +39,7 @@ use Drupal\formatage_models\Plugin\Layout\Teasers\FormatageModelsTeasers;
     {
         // TODO auto-generated method stub
         parent::__construct($configuration, $pludin_id, $plugin_definition, $styleGroupManager);
-        $this->pluginDefinition->set('icon', drupal_get_path('module', 'mitor') . "/icons/teasers/mitor-why.png");
+        $this->pluginDefinition->set('icon', drupal_get_path('module', 'mitor') . "/icons/teasers/salon-dessange-actu-all.png");
     }   
 
     /**
@@ -65,22 +66,29 @@ use Drupal\formatage_models\Plugin\Layout\Teasers\FormatageModelsTeasers;
             'content' => [
                 'builder-form' => true,
                 'info' => [
-                    'title' => 'Why us informations',
+                    'title' => 'Actu bloc informations',
                     'loader' => 'static',
                 ],
                 'fields' => [
-                    'mitor_why_icon' => [
+                    'salon_dessange_actu_teaser_title' => [
                         'text_html' => [
-                            'label' => 'Why us icon',
-                            'value' => '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17l-.59.59l-.58.58V4h16v12zm-9-4h2v2h-2zm0-6h2v4h-2z"/></svg>',
+                            'label' => '<strong>voir</strong>
+                            <span>toute</span>
+                            <br>
+                            <strong>L’ACTUALITÉ</strong>',
                         ]
                     ],
-                    'mitor_why_message' => [
+                    'salon_dessange_actu_teaser_icon' => [
                         'text_html' => [
-                            'label' => 'message',
-                            'value' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. In illum modi velit veritatis aliquam corporis provident ut? Soluta.',
+                            'label' => '<span class="angle-long-right"></span>',
                         ]
-                        ],
+                    ],
+                    'salon_dessange_actu_all_teaser_link' => [
+                        'url' => [
+                            'label' => 'lien vers les contenues',
+                            'value' => '#',
+                        ]
+                    ],
                 ],
             ],
         ];

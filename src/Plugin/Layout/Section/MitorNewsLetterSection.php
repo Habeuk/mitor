@@ -9,7 +9,7 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
 /**
  * Mitor Newsletter section php
  * @Layout(
- *  id = "mitor_news_letter_section",
+ *  id = "mitor_newsletter_section",
  *  label = @Translation("mitor newsletter"),
  *  category = @Translation("mitor"),
  *  path = "layouts/sections",
@@ -34,7 +34,7 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
  * )
  */
 
-class MitorNewsLetterSection extends FormatageModelsSection
+class MitorNewsletterSection extends FormatageModelsSection
 {
 
     /**

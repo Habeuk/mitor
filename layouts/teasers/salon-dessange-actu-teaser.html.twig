@@ -1,0 +1,28 @@
+{% if content %}
+	<div class="col-md-6">
+		<div {{ attributes.addClass('sd-card-actu') }}>
+			{% if content.salon_dessange_actu_teaser_image %}
+                <div {{ region_attributes.salon_dessange_actu_teaser_image.addClass(['card-img']) }}>
+                {{ content.salon_dessange_actu_teaser_image }}
+			</div>
+            {% endif %}
+
+			{% if content.salon_dessange_actu_teaser_badge %}
+                <div class="tag-list">
+				<div {{ region_attributes.salon_dessange_actu_teaser_badge.addClass(['tag-item']) }}>
+					{{ content.salon_dessange_actu_teaser_badge }}
+				</div>
+			</div>
+            {% endif %}
+
+			{% if content.salon_dessange_actu_teaser_title %}
+                <div class="card-body">
+				<h2 {{ region_attributes.salon_dessange_actu_teaser_title.addClass(['title']) }}>
+					{{ content.salon_dessange_actu_teaser_title }}
+				</h2>
+			</div>
+            {% endif %}
+
+		</div>
+	</div>
+{% endif %}
