@@ -89,9 +89,11 @@ class MitorNotFoundSection extends FormatageModelsSection
                         ]
                     ],
                     'mitor_not_found_try_again' => [
-                        'value' => [
-                            'class' => 'refresh',
-                            'text' => 'try again'
+                        'url' => [
+                            'value' => [
+                                'class' => 'refresh',
+                                'text' => 'try again'
+                            ]
                           ]
                     ],
                     'mitor_not_found_back_to_home_button' => [

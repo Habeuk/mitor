@@ -10,11 +10,15 @@
 				<div class="content">
 					<h6 class="title">
 						{% if content.mitor_not_found_title %}
-							{{ content.mitor_not_found_title }}
+							<div {{ region_attributes.mitor_not_found_title.addClass(['d-inline-block']) }}>
+								{{ content.mitor_not_found_title }}
+							</div>
 						{% endif %}
 
 						{% if content.mitor_not_found_try_again %}
-							{{ content.mitor_not_found_try_again }}
+							<div {{ region_attributes.mitor_not_found_try_again.addClass(['d-inline-block']) }}>
+								{{ content.mitor_not_found_try_again }}
+							</div>
 						{% endif %}
 					</h6>
 					{% if content.mitor_not_found_back_to_home_button %}
