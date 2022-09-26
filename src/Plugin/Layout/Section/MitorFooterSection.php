@@ -50,8 +50,8 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
  *      "mitor_footer_copyright" = {
  *       "label" = @Translation("mitor footer copyright")
  *      },
- *      "mitor_footer_terms" = {
- *       "label" = @Translation("mitor footer terms")
+ *      "mitor_footer_term" = {
+ *       "label" = @Translation("mitor footer term")
  *      }
  *      
  *  }
@@ -209,7 +209,7 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
                             'value' => 'Copyright © <a href="#">Habeuk</a> - 2022',
                         ]
                     ],
-                    'mitor_footer_terms' => [
+                    'mitor_footer_term' => [
                         'text_html' => [
                             'label' => 'Copyright',
                             'value' => '<ul class="inline-link">
