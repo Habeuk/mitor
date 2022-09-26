@@ -26,7 +26,6 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
  *      "mitor_background_image = {
  *       "label" = @Translation("mitor contact hero background image"),
  *      },
- *      
  *  }
  * )
  */
