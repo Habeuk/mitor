@@ -16,7 +16,7 @@
 					{% endif %}
 
 					{% if content.mitor_footer_social %}
-						<div {{ region_attributes.mitor_footer_site_name.addClass(['social-bloc']) }}>
+						<div {{ region_attributes.mitor_footer_social.addClass(['social-bloc']) }}>
 							{{ content.mitor_footer_social }}
 						</div>
 					{% endif %}
@@ -25,7 +25,7 @@
 				<div class="col-lg-3 col-md-5 footer-column">
 					{% if content.mitor_footer_column1_title %}
 						<div {{ region_attributes.mitor_footer_column1_title.addClass(['head-element']) }}>
-							<p>{{ content.testimonialmitor_footer_column1_title }}</p>
+							<p>{{ content.mitor_footer_column1_title }}</p>
 						</div>
 					{% endif %}
 
@@ -45,7 +45,7 @@
 
 					{% if content.mitor_footer_column2_links %}
 						<div {{ region_attributes.mitor_footer_column2_links.addClass(['links']) }}>
-							{{ content.mitor_footer_column1_links }}
+							{{ content.mitor_footer_column2_links }}
 						</div>
 					{% endif %}
 
@@ -59,13 +59,13 @@
                     {% endif %}
 					
                     {% if content.footer_subscribe_text %}
-                        <div {{ region_attributes.mitor_footer_subscribe.addClass(['description']) }}>
+                        <div {{ region_attributes.footer_subscribe_text.addClass(['description']) }}>
 						<p>{{ content.footer_subscribe_text }}</p>
 					</div>
                     {% endif %}
 					
                     {% if content.mitor_footer_subscribe_form %}
-                        <div {{ region_attributes.mitor_footer_subscribe.addClass(['email-form']) }}>
+                        <div {{ region_attributes.mitor_footer_subscribe_form.addClass(['email-form']) }}>
 						{{ content.mitor_footer_subscribe_form }}
 					</div>
                     {% endif %}
@@ -81,7 +81,7 @@
 				{% endif %}
 
 				{% if content.mitor_footer_term %}
-					<div {{ region_attributes.mitor_footer_column2_links.addClass(['col-md-8', 'd-flex', 'align-items-end']) }}>
+					<div {{ region_attributes.mitor_footer_term.addClass(['col-md-8', 'd-flex', 'align-items-end']) }}>
 						{{ content.mitor_footer_term }}
 					</div>
 				{% endif %}
