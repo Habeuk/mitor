@@ -7,7 +7,7 @@ use Drupal\formatage_models\FormatageModelsThemes;
 use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
 
 /**
- * Mitor Newsletter section php
+ * Mitor MitorContactHeroSection section php
  * @Layout(
  *  id = "mitor_contact_hero_section",
  *  label = @Translation("mitor contact hero"),
@@ -20,10 +20,10 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
  *      "mitor_title" = {
  *       "label" = @Translation("mitor contact hero title"),
  *      },
- *      "mitor_element = {
+ *      "mitor_element" = {
  *       "label" = @Translation("mitor contact hero element"),
  *      },
- *      "mitor_background_image = {
+ *      "mitor_background_image" = {
  *       "label" = @Translation("mitor contact hero background image"),
  *      },
  *      
