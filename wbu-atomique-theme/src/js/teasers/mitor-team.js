@@ -1,1 +1,2 @@
 import '@stephane888/wbu-atomique/scss/organisme/sections/theme_builder/mitor/mitor-team.scss';
+import '@stephane888/wbu-atomique/scss/organisme/sections/theme_builder/mitor/molecule/mitor-team-lutin.scss';
