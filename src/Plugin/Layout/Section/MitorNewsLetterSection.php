@@ -27,7 +27,7 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
  *       "label" = @Translation("mitor newsletter form"),
  *      },
  *      "mitor_newsletter_social_links" = {
- *       "label" = @Translation("mitor newsletter form"),
+ *       "label" = @Translation("mitor newsletter links"),
  *      },
  *      
  *  }
