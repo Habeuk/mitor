@@ -53,7 +53,7 @@ class MitorBlogRightSide extends FormatageModelsSection
     {
         // TODO auto-generated method stub
         parent::__construct($configuration, $pludin_id, $plugin_definition, $styleGroupManager);
-        $this->pluginDefinition->set('icon', drupal_get_path('module', 'mitor') . "/icons/sections/mitor-contact-hero.png");
+        $this->pluginDefinition->set('icon', drupal_get_path('module', 'mitor') . "/icons/sections/mitor-blog-right-side.png");
     }
 
     /**
