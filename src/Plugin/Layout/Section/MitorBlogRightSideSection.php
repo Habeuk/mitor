@@ -14,7 +14,6 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
  *  category = @Translation("mitor"),
  *  path = "layouts/sections",
  *  template = "mitor-blog-right-section",
- *  library = "mitor/mitor-blog-right-section",
  *  default_region = "content",
  *  regions = {
  *      "all_posts" = {

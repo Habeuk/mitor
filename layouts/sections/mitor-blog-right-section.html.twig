@@ -21,7 +21,7 @@
 						<div class="sidebar-widget recent-post">
 							{% if content.first_container_title %}
 								<div class="widget-title">
-									<h4 class=""{{ region_attributes.first_container_title.addClass(['title']) }}>
+									<h4 {{ region_attributes.first_container_title.addClass(['title']) }}>
 										{{ content.first_container_title }}
 									</h4>
 								</div>
@@ -35,7 +35,7 @@
 						<div class="sidebar-widget recent-post">
 							{% if content.second_container_title %}
 								<div class="widget-title">
-									<h4 class=""{{ region_attributes.second_container_title.addClass(['title']) }}>
+									<h4 {{ region_attributes.second_container_title.addClass(['title']) }}>
 										{{ content.second_container_title }}
 									</h4>
 								</div>
@@ -49,7 +49,7 @@
 						<div class="sidebar-widget recent-post">
 							{% if content.third_container_title %}
 								<div class="widget-title">
-									<h4 class=""{{ region_attributes.third_container_title.addClass(['title']) }}>
+									<h4 {{ region_attributes.third_container_title.addClass(['title']) }}>
 										{{ content.third_container_title }}
 									</h4>
 								</div>
