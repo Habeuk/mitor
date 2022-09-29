@@ -1,14 +1,14 @@
 {% if content %}
 	<article {{ attributes.addClass('element') }}>
 		<a href="#" class="link-element">
-			{% if content. %}
-                <div {{ region_attributes.mitor_project_image.addClass('category') }}>
-                    {{ content. }}
+			{% if content.name %}
+                <div {{ region_attributes.name.addClass('category') }}>
+                    {{ content.name }}
                 </div>
             {% endif %}
-			{% if content. %}
-                <span {{ region_attributes.mitor_project_image.addClass('number') }}>
-				({{ content. }})
+			{% if content.value %}
+                <span {{ region_attributes.value.addClass('number') }}>
+				({{ content.value }})
 			</span>
             {% endif %}
 		</a>
