@@ -42,7 +42,7 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
  * )
  */
 
-class MitorBlogRightSide extends FormatageModelsSection
+class MitorBlogRightSideSection extends FormatageModelsSection
 {
 
     /**
