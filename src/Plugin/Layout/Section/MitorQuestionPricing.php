@@ -24,7 +24,7 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
  *       "label" = @Translation("mitor question pricing description"),
  *      },
  *      "mitor_question_pricing_button" = {
- *       "label" = @Translation("mitor question pricing description"),
+ *       "label" = @Translation("mitor question pricing button"),
  *      },
  *      
  *  }
