@@ -24,9 +24,9 @@
 				</div>
 				<div class="col-lg-3 col-md-5 footer-column">
 					{% if content.mitor_footer_column1_title %}
-						<div {{ region_attributes.mitor_footer_column1_title.addClass(['head-element']) }}>
-							<p>{{ content.mitor_footer_column1_title }}</p>
-						</div>
+						<h3 {{ region_attributes.mitor_footer_column1_title.addClass(['head-element']) }}>
+							{{ content.mitor_footer_column1_title }}
+						</h3>
 					{% endif %}
 
 					{% if content.mitor_footer_column1_links %}
@@ -38,9 +38,9 @@
 				</div>
 				<div class="col-lg-3 col-md-5 footer-column">
 					{% if content.mitor_footer_column2_title %}
-						<div {{ region_attributes.mitor_footer_column2_title.addClass(['head-element']) }}>
-							<p>{{ content.mitor_footer_column2_title }}</p>
-						</div>
+						<h3 {{ region_attributes.mitor_footer_column2_title.addClass(['head-element']) }}>
+							{{ content.mitor_footer_column2_title }}
+						</h3>
 					{% endif %}
 
 					{% if content.mitor_footer_column2_links %}
@@ -53,19 +53,19 @@
 				<div class="col-lg-3 col-md-5 footer-column">
 
                     {% if content.mitor_footer_subscribe %}
-                        <div {{ region_attributes.mitor_footer_subscribe.addClass(['head-element']) }}>
-						<p>{{ content.mitor_footer_subscribe }}</p>
-					</div>
+                    <h3 {{ region_attributes.mitor_footer_subscribe.addClass(['head-element']) }}>
+						{{ content.mitor_footer_subscribe }}
+					</h3>
                     {% endif %}
 					
                     {% if content.mitor_footer_subscribe_text %}
                     <div {{ region_attributes.mitor_footer_subscribe_text.addClass(['description']) }}>
-						<p>{{ content.mitor_footer_subscribe_text }}</p>
+						{{ content.mitor_footer_subscribe_text }}
 					</div>
                     {% endif %}
 					
                     {% if content.mitor_footer_subscribe_form %}
-                        <div {{ region_attributes.mitor_footer_subscribe_form.addClass(['email-form']) }}>
+                    <div {{ region_attributes.mitor_footer_subscribe_form.addClass(['email-form']) }}>
 						{{ content.mitor_footer_subscribe_form }}
 					</div>
                     {% endif %}
