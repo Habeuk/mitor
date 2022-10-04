@@ -1,5 +1,6 @@
 {% if content %}
 	<footer {{ attributes.addClass('mitor-footer') }}>
+		<div class="footer-first">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3 col-md-5 footer-column">
@@ -72,20 +73,30 @@
 					
 				</div>
 			</div>
-
+		</div>	
+		</div>	
+			
+			
+			
+			
+			
+			
+			
+		<div class="mitor-footer-last">	
+		<div class="container">
 			<div class="copyright text-center row">
 				{% if content.mitor_footer_copyright %}
 					<div {{ region_attributes.mitor_footer_copyright.addClass(['col-md-4', 'pb-5', 'p-sm-0', 'text-left']) }}>
 						{{ content.mitor_footer_copyright }}
 					</div>
 				{% endif %}
-
 				{% if content.mitor_footer_term %}
 					<div {{ region_attributes.mitor_footer_term.addClass(['col-md-8', 'd-flex', 'align-items-end']) }}>
 						{{ content.mitor_footer_term }}
 					</div>
 				{% endif %}
 			</div>
+		</div>
 		</div>
 	</footer>
 {% endif %}

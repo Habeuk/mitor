@@ -8,6 +8,7 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
 
 /**
  * Mitor footer section php
+ *
  * @Layout(
  *  id = "mitor_footer_section",
  *  label = @Translation("mitor footer section"),
@@ -53,69 +54,72 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
  *      "mitor_footer_term" = {
  *       "label" = @Translation("mitor footer term")
  *      }
- *      
+ *
  *  }
  * )
  */
+class MitorFooterSection extends FormatageModelsSection {
 
- class MitorFooterSection extends FormatageModelsSection
- {
-    
-    /**
-     * {@inheritdoc}
-     * @see Drupal\formatage_models\Plugin\Layout\FormatageModels::_construct
-     */
-    public function __construct(array $configuration, $pludin_id, $plugin_definition, StylesGroupManager $styleGroupManager)
-    {
-        // TODO auto-generated method stub
-        parent::__construct($configuration, $pludin_id, $plugin_definition, $styleGroupManager);
-        $this->pluginDefinition->set('icon', drupal_get_path('module', 'mitor') . "/icons/sections/mitor-footer-section.png");
-    }   
+  /**
+   *
+   * {@inheritdoc}
+   * @see \Drupal\formatage_models\Plugin\Layout\FormatageModels::_construct
+   */
+  public function __construct(array $configuration, $pludin_id, $plugin_definition, StylesGroupManager $styleGroupManager) {
+    // TODO auto-generated method stub
+    parent::__construct($configuration, $pludin_id, $plugin_definition, $styleGroupManager);
+    $this->pluginDefinition->set('icon', drupal_get_path('module', 'mitor') . "/icons/sections/mitor-footer-section.png");
+  }
 
-    /**
-     * {@inheritdoc}
-     * @see Drupal\formatage_models\Plugin\Layout\FormatageModels::build
-     */
-    public function build(array $regions)
-    {
-        // TODO auto-generated method stub
-        $build = parent::build($regions);
-        FormatageModelsThemes::formatSettingValues($build);
+  /**
+   *
+   * {@inheritdoc}
+   * @see \Drupal\formatage_models\Plugin\Layout\FormatageModels::build
+   */
+  public function build(array $regions) {
+    // TODO auto-generated method stub
+    $build = parent::build($regions);
+    $build['mitor_footer_site_logo'] = [
+      '#theme' => 'image_style',
+      '#style_name' => 'thumbnail',
+      '#uri' => theme_get_setting('logo.path')
+    ];
+    // theme_get_setting('logo.url');
+    FormatageModelsThemes::formatSettingValues($build);
+    return $build;
+  }
 
-        return $build;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function defaultConfiguration()
-    {
-        return parent::defaultConfiguration() + [
-            'css' => '',
-            'load_library' => true,
-            'content' => [
-                'builder-form' => true,
-                'info' => [
-                    'title' => 'Footer informations',
-                    'loader' => 'static',
-                ],
-                'fields' => [
-                    'mitor_footer_site_logo' => [
-                        'text_html' => [
-                            'label' => 'nom du site',
-                            'value' => '<img src="http://slidesigma.com/themes/html/mitor/assets/img/logo.png" alt="" />',
-                        ]
-                    ],
-                    'mitor_footer_description' => [
-                        'text_html' => [
-                            'label' => 'description',
-                            'value' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
-                        ]
-                    ],
-                    'mitor_footer_social' => [
-                        'text_html' => [
-                            'label' => 'liens sociaux',
-                            'value' => '<a href="#" class="">
+  /**
+   *
+   * {@inheritdoc}
+   */
+  public function defaultConfiguration() {
+    return parent::defaultConfiguration() + [
+      'css' => '',
+      'load_library' => true,
+      'content' => [
+        'builder-form' => true,
+        'info' => [
+          'title' => 'Footer informations',
+          'loader' => 'static'
+        ],
+        'fields' => [
+          'mitor_footer_site_logo' => [
+            'text_html' => [
+              'label' => 'Nom du site',
+              'value' => '<img src="http://slidesigma.com/themes/html/mitor/assets/img/logo.png" alt="" />'
+            ]
+          ],
+          'mitor_footer_description' => [
+            'text_html' => [
+              'label' => 'description',
+              'value' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore'
+            ]
+          ],
+          'mitor_footer_social' => [
+            'text_html' => [
+              'label' => 'liens sociaux',
+              'value' => '<a href="#" class="">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                                 <path
                                       d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
@@ -138,19 +142,20 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
                                 <path
                                       d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
                             </svg>
-                        </a>',
-                        ]
-                    ],
-                    'mitor_footer_column1_title' => [
-                        'text_html' => [
-                            'label' => 'Titre de la première colonne',
-                            'value' => 'Links',
-                        ]
-                    ],
-                    'mitor_footer_column1_links' => [
-                        'text_html' => [
-                            'label' => 'liens de la première colonne',
-                            'value' => '<div class="link">
+                        </a>'
+            ]
+          ],
+          'mitor_footer_column1_title' => [
+            'text_html' => [
+              'label' => 'Titre de la première colonne',
+              'value' => 'Links'
+            ]
+          ],
+          'mitor_footer_column1_links' => [
+            'text_html' => [
+              'label' => 'liens colonne 2',
+              'value' => '<div class="links">
+                        <div class="link">
                             <a href="" class=" ">About Us</a>
                         </div>
                         <div class="link">
@@ -161,19 +166,21 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
                         </div>
                         <div class="link">
                             <a href="" class=" ">Terms of Use</a>
-                        </div>',
-                        ]
-                    ],
-                    'mitor_footer_column2_title' => [
-                        'text_html' => [
-                            'label' => 'Titre de la deuxième colonne',
-                            'value' => 'Navigation',
-                        ]
-                    ],
-                    'mitor_footer_column2_links' => [
-                        'text_html' => [
-                            'label' => 'liens de la deuxième colonne',
-                            'value' => '<div class="link">
+                        </div>
+                    </div>'
+            ]
+          ],
+          'mitor_footer_column2_title' => [
+            'text_html' => [
+              'label' => 'Titre colonne 3',
+              'value' => 'Navigation'
+            ]
+          ],
+          'mitor_footer_column2_links' => [
+            'text_html' => [
+              'label' => 'liens colonne 3',
+              'value' => '<div class="links">
+                        <div class="link">
                             <a href="" class=" "></a>
                         </div>
                         <div class="link">
@@ -181,51 +188,49 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
                         </div>
                         <div class="link">
                             <a href="" class=" ">Privacy</a>
-                        </div>',
-                        ]
-                    ],
-                    'mitor_footer_subscribe' => [
-                        'text_html' => [
-                            'label' => 'Titre pour la soubscription à la newsletter',
-                            'value' => 'Suscribe Us',
-                        ]
-                    ],
-                    'mitor_footer_subscribe_text' => [
-                        'text_html' => [
-                            'label' => 'texte pour la soubscription à la newsletter',
-                            'value' => 'Enter your email subscribe to our news and updates by email.',
-                        ]
-                    ],
-                    'mitor_footer_subscribe_form' => [
-                        'text_html' => [
-                            'label' => 'formulaire d\'inscription à la newsletter',
-                            'value' => '<input type="email" class="mail form-control" placeholder="Votre Email" name="" id=""/>
-                            <a type="submit" class="mitor-btn">subscribe</a>',
-                        ]
-                    ],
-                    'mitor_footer_copyright' => [
-                        'text_html' => [
-                            'label' => 'Copyright',
-                            'value' => 'Copyright © <a href="#">Habeuk</a> - 2022',
-                        ]
-                    ],
-                    'mitor_footer_term' => [
-                        'text_html' => [
-                            'label' => 'Copyright',
-                            'value' => '<ul class="inline-link">
+                        </div>
+                    </div>'
+            ]
+          ],
+          'mitor_footer_subscribe' => [
+            'text_html' => [
+              'label' => 'Titre pour la soubscription à la newsletter',
+              'value' => 'Suscribe Us'
+            ]
+          ],
+          'mitor_footer_subscribe_text' => [
+            'text_html' => [
+              'label' => 'texte pour la soubscription à la newsletter',
+              'value' => 'Enter your email subscribe to our news and updates by email.'
+            ]
+          ],
+          'mitor_footer_subscribe_form' => [
+            'text_html' => [
+              'label' => 'formulaire d\'inscription à la newsletter',
+              'value' => '<input type="email" class="mail form-control" placeholder="Votre Email" name="" id=""/>
+                            <a type="submit" class="mitor-btn">subscribe</a>'
+            ]
+          ],
+          'mitor_footer_copyright' => [
+            'text_html' => [
+              'label' => 'Copyright',
+              'value' => 'Copyright © <a href="#">Habeuk</a> - 2022'
+            ]
+          ],
+          'mitor_footer_term' => [
+            'text_html' => [
+              'label' => 'Autres liens',
+              'value' => '<ul class="inline-link">
                             <li><a href="#">Terms and Conditions</a></li>
                             <li><a href="#">Privacy &amp; Policy</a></li>
                             <li><a href="#">Legal</a></li>
-        
                             <li><a href="#">Notice</a></li>
-        
-                        </ul>',
-                        ]
-                    ],
-                ],
-            ],
-        ];
-    }
-    
- }
- 
+                        </ul>'
+            ]
+          ]
+        ]
+      ]
+    ];
+  }
+
+}
