@@ -90,7 +90,8 @@ class MitorQuestionPricing extends FormatageModelsSection
                             'label' => 'Question pricing button',
                             'value' => [
                                 'class' => 'link',
-                                'text' => 'check FAQ'
+                                'text' => 'check FAQ',
+                                'href' => '#',
                             ]
                         ]
                     ],
