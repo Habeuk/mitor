@@ -54,14 +54,14 @@
 				<div class="col-lg-3 col-md-5 footer-column">
 
                     {% if content.mitor_footer_subscribe %}
-                    <h3 {{ region_attributes.mitor_footer_subscribe.addClass(['head-element']) }}>
+                    <{{settings.mitor_footer_subscribe}} {{ region_attributes.mitor_footer_subscribe.addClass(['head-element']) }}>
 						{{ content.mitor_footer_subscribe }}
-					</h3>
+					</{{settings.mitor_footer_subscribe}}>
                     {% endif %}
 					
                     {% if content.mitor_footer_subscribe_text %}
                     <div {{ region_attributes.mitor_footer_subscribe_text.addClass(['description']) }}>
-						<{{settings.region_tag_mitor_footer_subscribe_text}}>{{ content.mitor_footer_subscribe_text }}</{{settings.region_tag_mitor_footer_subscribe_text}}>
+						<p>{{ content.mitor_footer_subscribe_text }}</p>
 					</div>
                     {% endif %}
 					

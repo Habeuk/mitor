@@ -101,7 +101,7 @@ class MitorFooterSection extends FormatageModelsSection {
       'region_css_mitor_footer_subscribe_text' => 'h4',
       "region_tag_mitor_footer_column1_title" => "h4",
       "region_tag_mitor_footer_column2_title" => "h4",
-      "region_tag_mitor_footer_subscribe_text" => 'h4',
+      "region_tag_mitor_footer_subscribe" => 'h4',
       'load_library' => true,
       'content' => [
         'builder-form' => true,
