@@ -96,9 +96,12 @@ class MitorFooterSection extends FormatageModelsSection {
   public function defaultConfiguration() {
     return parent::defaultConfiguration() + [
       'css' => '',
-      'region_css_mitor_footer_column1_title' => 'h3',
-      'region_css_mitor_footer_column2_title' => 'h3',
-      'region_css_mitor_footer_subscribe_text' => 'h3',
+      'region_css_mitor_footer_column1_title' => 'h4',
+      'region_css_mitor_footer_column2_title' => 'h4',
+      'region_css_mitor_footer_subscribe_text' => 'h4',
+      'region_tag_mitor_footer_column1_title' => 'h4',
+      'region_tag_mitor_footer_column2_title' => 'h4',
+      'region_tag_mitor_footer_subscribe_text' => 'h4',
       'load_library' => true,
       'content' => [
         'builder-form' => true,

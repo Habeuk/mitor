@@ -25,9 +25,9 @@
 				</div>
 				<div class="col-lg-3 col-md-5 footer-column">
 					{% if content.mitor_footer_column1_title %}
-						<div {{ region_attributes.mitor_footer_column1_title.addClass(['head-element']) }}>
+						<{{settings.mitor_footer_column1_title}} {{ region_attributes.mitor_footer_column1_title.addClass(['head-element']) }}>
 							<p>{{ content.mitor_footer_column1_title }}</p>
-						</div>
+						</{{settings.mitor_footer_column1_title}}>
 					{% endif %}
 
 					{% if content.mitor_footer_column1_links %}
@@ -39,9 +39,9 @@
 				</div>
 				<div class="col-lg-3 col-md-5 footer-column">
 					{% if content.mitor_footer_column2_title %}
-						<div {{ region_attributes.mitor_footer_column2_title.addClass(['head-element']) }}>
+						<{{settings.mitor_footer_column2_title}} {{ region_attributes.mitor_footer_column2_title.addClass(['head-element']) }}>
 							<p>{{ content.mitor_footer_column2_title }}</p>
-						</div>
+						</{{settings.mitor_footer_column2_title}}>
 					{% endif %}
 
 					{% if content.mitor_footer_column2_links %}
@@ -61,7 +61,7 @@
 					
                     {% if content.mitor_footer_subscribe_text %}
                     <div {{ region_attributes.mitor_footer_subscribe_text.addClass(['description']) }}>
-						<p>{{ content.mitor_footer_subscribe_text }}</p>
+						<{{settings.mitor_footer_subscribe_text}}>{{ content.mitor_footer_subscribe_text }}</{{settings.mitor_footer_subscribe_text}}>
 					</div>
                     {% endif %}
 					
