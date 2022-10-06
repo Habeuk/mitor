@@ -1,7 +1,4 @@
 {% if content %}
-<pre>
-	{{ dump(settings) }}
-</pre>
 	<footer {{ attributes.addClass('mitor-footer') }}>
 		<div class="footer-first">
 		<div class="container">
@@ -28,9 +25,9 @@
 				</div>
 				<div class="col-lg-3 col-md-5 footer-column">
 					{% if content.mitor_footer_column1_title %}
-						<h3 {{ region_attributes.mitor_footer_column1_title.addClass(['head-element']) }}>
+						<{{settings.region_tag_mitor_footer_column1_title}} {{ region_attributes.mitor_footer_column1_title.addClass(['head-element']) }}>
 							<p>{{ content.mitor_footer_column1_title }}</p>
-						</h3>
+						</{{settings.region_tag_mitor_footer_column1_title}}>
 					{% endif %}
 
 					{% if content.mitor_footer_column1_links %}
