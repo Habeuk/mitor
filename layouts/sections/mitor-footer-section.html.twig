@@ -54,9 +54,9 @@
 				<div class="col-lg-3 col-md-5 footer-column">
 
                     {% if content.mitor_footer_subscribe %}
-                        <div {{ region_attributes.mitor_footer_subscribe.addClass(['head-element']) }}>
-						<p>{{ content.mitor_footer_subscribe }}</p>
-					</div>
+                    <h3 {{ region_attributes.mitor_footer_subscribe.addClass(['head-element']) }}>
+						{{ content.mitor_footer_subscribe }}
+					</h3>
                     {% endif %}
 					
                     {% if content.mitor_footer_subscribe_text %}
@@ -66,7 +66,7 @@
                     {% endif %}
 					
                     {% if content.mitor_footer_subscribe_form %}
-                        <div {{ region_attributes.mitor_footer_subscribe_form.addClass(['email-form']) }}>
+                    <div {{ region_attributes.mitor_footer_subscribe_form.addClass(['email-form']) }}>
 						{{ content.mitor_footer_subscribe_form }}
 					</div>
                     {% endif %}
