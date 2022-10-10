@@ -35,3 +35,11 @@ field.field_settings.icon:
     show_text:
       type: bool
       label: 'Show Text'
+
+field.widget.settings.bar:
+  type: mapping
+  label: 'BAZ widget settings'
+  mapping:
+    size:
+      type: integer
+      label: 'Size'
