@@ -29,6 +29,9 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
  *      "mitor_not_found_back_to_home_button" = {
  *       "label" = @Translation("mitor not found back to home button"),
  *      },
+ *      "background_image" = {
+ *       "label" = @Translation("mitor not found background image"),
+ *      },
  *      
  *  }
  * )
@@ -104,6 +107,11 @@ class MitorNotFoundSection extends FormatageModelsSection
                                 'text' => 'back to home'
                             ]
                         ]
+                    ],
+                    'background_image' => [
+                        'img_bg' => [
+                            'label' => 'Background Image',
+                            ]
                     ],
                 ],
             ],

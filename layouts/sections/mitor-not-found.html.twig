@@ -1,4 +1,10 @@
 {% if content %}
+	{% if content.background_image.layout_builder_add_block %}
+		{{ content.background_image }}
+	{% endif %}
+	{% if content.background_image|layout_bg_img %}
+		{% set attributes = attributes.merge(content.background_image|layout_bg_img) %}
+	{% endif %}
 	<section {{ attributes.addClass('mitor-404-section-handler') }}>
 		<div class="container">
 			<div class="msg-404">
