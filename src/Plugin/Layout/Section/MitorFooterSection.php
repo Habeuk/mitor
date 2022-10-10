@@ -103,6 +103,13 @@ class MitorFooterSection extends FormatageModelsSection {
       "region_tag_mitor_footer_column2_title" => "h4",
       "region_tag_mitor_footer_subscribe" => 'h4',
       'load_library' => true,
+      "derivate" => [
+        'value' => '',
+        'options' => [
+            'mitor-footer--flat-3' => 'flat 3',
+            'single-testimonial--flex' => 'flat'
+        ],
+      ],
       'content' => [
         'builder-form' => true,
         'info' => [
@@ -184,7 +191,7 @@ class MitorFooterSection extends FormatageModelsSection {
           ],
           'mitor_footer_column2_links' => [
             'text_html' => [
-              'label' => 'liens colonne 3',
+              'label' => 'liensmitor-footer--flat-3 colonne 3',
               'value' => '<div class="links">
                         <div class="link">
                             <a href="" class=" "></a>
@@ -204,7 +211,7 @@ class MitorFooterSection extends FormatageModelsSection {
               'value' => 'Suscribe Us'
             ]
           ],
-          'mitor_footer_subscribe_text' => [
+          'mitor_footer_subscrimitor-footer--flat-3be_text' => [
             'text_html' => [
               'label' => 'texte pour la soubscription à la newsletter',
               'value' => 'Enter your email subscribe to our news and updates by email.'

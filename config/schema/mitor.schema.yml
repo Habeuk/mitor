@@ -21,3 +21,17 @@ field.widget.storage_setting.mitor:
         code:
           type: string
           label: 'The placeholderof the code field'
+field.field_settings.baz:
+  type: mapping
+  label: 'BAZ settings'
+  mapping:
+    size:
+      type: string
+      label: 'Size'
+field.field_settings.icon:
+  type: mapping
+  label: 'Icon settings'
+  maping:
+    show_text:
+      type: bool
+      label: 'Show Text'
