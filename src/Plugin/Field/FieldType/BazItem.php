@@ -12,7 +12,8 @@ use Drupal\Core\TypedData\DataDefinition;
  * 
  * @FieldType(
  *   id = "baz",
- *   label = @Translation("Baz field")
+ *   label = @Translation("Baz field"),
+ *   default_widget = "baz_widget",
  * )
  */
 
