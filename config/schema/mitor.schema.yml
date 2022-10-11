@@ -43,3 +43,10 @@ field.widget.settings.bar:
     size:
       type: integer
       label: 'Size'
+field.value.mitor_test:
+  type: mapping
+  label: Default value
+  mapping:
+    value:
+      type: label
+      label: Value

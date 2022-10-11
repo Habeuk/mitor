@@ -12,7 +12,8 @@ use Drupal\Core\TypedData\DataDefinition;
  * 
  * @FieldType(
  *   id = "icon",
- *   label = @Translation("Icon field")
+ *   label = @Translation("Icon field"),
+ *   default_widget = "icon_widget",
  * )
  */
 

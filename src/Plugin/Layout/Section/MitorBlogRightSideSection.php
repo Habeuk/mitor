@@ -26,16 +26,19 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
  *       "label" = @Translation("mitor blog right side first container title"),
  *      },
  *      "second_container" = {
- *       "label" = @Translation("mitor blog right side first container"),
+ *       "label" = @Translation("mitor blog right side second container"),
  *      },
  *      "second_container_title" = {
- *       "label" = @Translation("mitor blog right side first container title"),
+ *       "label" = @Translation("mitor blog right side second container title"),
  *      },
  *      "third_container" = {
- *       "label" = @Translation("mitor blog right side first container"),
+ *       "label" = @Translation("mitor blog right side third container"),
  *      },
  *      "third_container_title" = {
- *       "label" = @Translation("mitor blog right side first container"),
+ *       "label" = @Translation("mitor blog right side third container title"),
+ *      },
+ *      "search" = {
+ *       "label" = @Translation("mitor blog right search"),
  *      },
  *  }
  * )
@@ -123,6 +126,12 @@ class MitorBlogRightSideSection extends FormatageModelsSection
                         'text' => [
                             'label' => 'third container title',
                             'value' => 'title',
+                        ]
+                    ],
+                    'search' => [
+                        'text_html' => [
+                            'label' => 'search',
+                            'value' => 'search',
                         ]
                     ],
                 ],
