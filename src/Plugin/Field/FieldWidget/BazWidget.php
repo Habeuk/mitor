@@ -10,7 +10,7 @@ use Drupal\Core\Form\FormStateInterface;
  * A widget bar.
  *
  * @FieldWidget(
- *   id = "bar",
+ *   id = "baz_widget",
  *   label = @Translation("Bar widget"),
  *   field_types = {
  *     "baz",
@@ -19,7 +19,7 @@ use Drupal\Core\Form\FormStateInterface;
  * )
  */
 
-class BarWidget extends WidgetBase
+class BazWidget extends WidgetBase
 {
 
   /**
