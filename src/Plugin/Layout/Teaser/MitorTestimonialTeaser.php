@@ -76,7 +76,8 @@ use Drupal\formatage_models\Plugin\Layout\Teasers\FormatageModelsTeasers;
                 'value' => 'simple',
                 'options' => [
                     'single-testimonial' => 'simple',
-                    'single-testimonial--flex' => 'flat'
+                    'single-testimonial--flex' => 'flex',
+                    'single-testimonial--skeumorphisme' => 'skeumorphism'
                 ],
             ],
             'content' => [
