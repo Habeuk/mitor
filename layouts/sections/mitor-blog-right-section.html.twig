@@ -17,6 +17,9 @@
 							<div class="input-group-prepend">
 								<button class="btn btn-primary btn-sm px-5">Search</button>
 							</div>
+							{% if content.search %}
+								{{ content.search }}
+							{% endif %}
 						</div>
 						<div class="sidebar-widget recent-post">
 							{% if content.first_container_title %}
