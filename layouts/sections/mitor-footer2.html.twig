@@ -1,0 +1,71 @@
+{% if content %}
+	<div {{ attributes.addClass('footer-middle') }}>
+		<div class="container">
+			<div class="row fm-content">
+				<div class="col-lg-3 col-md-5 footer-column">
+					{% if content.title_one %}
+						<h5 {{ region_attributes.title_one.addClass(['head-element', 'h5']) }}>
+							{{ content.title_one }}
+						</h5>
+					{% endif %}
+					<div class="mc-description"></div>
+
+					{% if content.menu_one %}
+						{{ content.menu_one }}
+					{% endif %}
+
+				</div>
+				<div class="col-lg-3 col-md-5 footer-column">
+					{% if content.title_two %}
+						<h5 {{ region_attributes.title_two.addClass(['head-element', 'h5']) }}>
+							<p>{{ content.title_two }}</p>
+						</h5>
+					{% endif %}
+					{% if content.menu_two %}
+						<div class="links">
+							{% for item in content.menu_two|array_elements(region_attributes.menu_two) %}
+								<div class="link">
+									{{ item }}
+								</div>
+							{% endfor %}
+						</div>
+					{% endif %}
+				</div>
+				<div class="col-lg-3 col-md-5 footer-column">
+					{% if content.title_three %}
+						<h5 {{ region_attributes.title_three.addClass(['head-element', 'h5']) }}>
+							<p>{{ content.title_three }}</p>
+						</h5>
+					{% endif %}
+
+					{% if conten.menu_three %}
+						<div class="links">
+							{% for item in content.menu_three|array_elements(region_attributes.menu_three) %}
+								<div class="link">
+									{{ item }}
+								</div>
+							{% endfor %}
+						</div>
+					{% endif %}
+				</div>
+				<div class="col-lg-3 col-md-5 footer-column">
+					{% if content.title_four %}
+						<h5 {{ region_attributes.title_four.addClass(['head-element', 'h5']) }}>
+							<p>{{ content.title_four }}</p>
+						</h5>
+					{% endif %}
+					{% if containt.container %}
+						<div class="gallery-img">
+							{% for item in content.menu_three|array_elements(region_attributes.menu_three) %}
+								<div class="post-img">
+									{{ item }}
+								</div>
+							{% endfor %}
+						</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endif %}
