@@ -37,6 +37,21 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
  *      "third_container_title" = {
  *       "label" = @Translation("mitor blog left side first container"),
  *      },
+ *      "card_date" = {
+ *       "label" = @Translation("mitor blog left side card date"),
+ *      },
+ *      "card_month" = {
+ *       "label" = @Translation("mitor blog left side card month"),
+ *      },
+ *      "card_image" = {
+ *       "label" = @Translation("mitor blog left side card image"),
+ *      },
+ *      "card_title" = {
+ *       "label" = @Translation("mitor blog left side card title"),
+ *      },
+ *      "card_description" = {
+ *       "label" = @Translation("mitor blog left side card description"),
+ *      },
  *  }
  * )
  */
@@ -123,6 +138,36 @@ class MitorBlogLeftSideSection extends FormatageModelsSection
                         'text' => [
                             'label' => 'third container title',
                             'value' => 'title',
+                        ]
+                    ],
+                    'card_date' => [
+                        'text' => [
+                            'label' => 'date',
+                            'value' => '29',
+                        ]
+                    ],
+                    'card_month' => [
+                        'text' => [
+                            'label' => 'month',
+                            'value' => 'Sep',
+                        ]
+                    ],
+                    'card_image' => [
+                        'text' => [
+                            'label' => 'image',
+                            'value' => '',
+                        ]
+                    ],
+                    'card_title' => [
+                        'text' => [
+                            'label' => 'title',
+                            'value' => '',
+                        ]
+                    ],
+                    'card_description' => [
+                        'text' => [
+                            'label' => 'description',
+                            'value' => '',
                         ]
                     ],
                 ],
