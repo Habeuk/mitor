@@ -52,6 +52,9 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
  *      "card_description" = {
  *       "label" = @Translation("mitor blog left side card description"),
  *      },
+ *      "search" = {
+ *       "label" = @Translation("mitor blog left side search"),
+ *      },
  *  }
  * )
  */
@@ -168,6 +171,17 @@ class MitorBlogLeftSideSection extends FormatageModelsSection
                         'text' => [
                             'label' => 'description',
                             'value' => '',
+                        ]
+                    ],
+                    'search' => [
+                        'text_html' => [
+                            'label' => 'search',
+                            'value' => '<div class="input-group mycustom">
+                            <input type="text" placeholder="Keyword..." class="input outline-0 form-control" id="" required>
+                        </div>
+                        <div class="input-group-prepend">
+                            <button class="btn btn-primary btn-sm px-5">Search</button>
+                        </div>',
                         ]
                     ],
                 ],
