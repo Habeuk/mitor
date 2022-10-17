@@ -38,12 +38,12 @@
 						</h5>
 					{% endif %}
 
-					{% if conten.menu_three %}
+					{% if content.menu_three %}
 						<div class="links">
-							{% for item in content.menu_three|array_elements(region_attributes.menu_three) %}
-								<div class="link">
+							{% for item in content.menu_three|array_elements(region_attributes.menu_three.addClass('link')) %}
+								{#<div class="link">#}
 									{{ item }}
-								</div>
+								{#</div>#}
 							{% endfor %}
 						</div>
 					{% endif %}
@@ -54,12 +54,12 @@
 							<p>{{ content.title_four }}</p>
 						</h5>
 					{% endif %}
-					{% if containt.container %}
+					{% if content.container %}
 						<div class="gallery-img">
-							{% for item in content.menu_three|array_elements(region_attributes.menu_three) %}
-								<div class="post-img">
+							{% for item in content.container|array_elements(region_attributes.container.addClass('post-img')) %}
+								{#<div class="post-img">#}
 									{{ item }}
-								</div>
+								{#</div>#}
 							{% endfor %}
 						</div>
 					{% endif %}

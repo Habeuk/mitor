@@ -1,102 +1,160 @@
 {% if content %}
 	<footer {{ attributes.addClass('mitor-footer') }}>
+		{# footer first go there#}
 		<div class="footer-first">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-3 col-md-5 footer-column">
-					{% if content.mitor_footer_site_logo %}
-						<div {{ region_attributes.mitor_footer_site_logo.addClass(['img-logo']) }}>
-							{{ content.mitor_footer_site_logo }}
-						</div>
-					{% endif %}
-
-					{% if content.mitor_footer_description %}
-						<div {{ region_attributes.mitor_footer_description.addClass(['mc-description']) }}>
-							{{ content.mitor_footer_description }}
-						</div>
-					{% endif %}
-
-					{% if content.mitor_footer_social %}
-						<div {{ region_attributes.mitor_footer_social.addClass(['social-bloc']) }}>
-							{{ content.mitor_footer_social }}
-						</div>
-					{% endif %}
-
-				</div>
-				<div class="col-lg-3 col-md-5 footer-column">
-					{% if content.mitor_footer_column1_title %}
-						<{{settings.region_tag_mitor_footer_column1_title}} {{ region_attributes.mitor_footer_column1_title.addClass(['head-element']) }}>
-							<p>{{ content.mitor_footer_column1_title }}</p>
-						</{{settings.region_tag_mitor_footer_column1_title}}>
-					{% endif %}
-
-					{% if content.mitor_footer_column1_links %}
-						<div {{ region_attributes.mitor_footer_column1_links.addClass(['links']) }}>
-							{{ content.mitor_footer_column1_links }}
-						</div>
-					{% endif %}
-
-				</div>
-				<div class="col-lg-3 col-md-5 footer-column">
-					{% if content.mitor_footer_column2_title %}
-						<{{settings.region_tag_mitor_footer_column2_title}} {{ region_attributes.mitor_footer_column2_title.addClass(['head-element']) }}>
-							<p>{{ content.mitor_footer_column2_title }}</p>
-						</{{settings.region_tag_mitor_footer_column2_title}}>
-					{% endif %}
-
-					{% if content.mitor_footer_column2_links %}
-						<div {{ region_attributes.mitor_footer_column2_links.addClass(['links']) }}>
-							{{ content.mitor_footer_column2_links }}
-						</div>
-					{% endif %}
-
-				</div>
-				<div class="col-lg-3 col-md-5 footer-column">
-
-                    {% if content.mitor_footer_subscribe %}
-                    <{{settings.region_tag_mitor_footer_subscribe}} {{ region_attributes.mitor_footer_subscribe.addClass(['head-element']) }}>
-						{{ content.mitor_footer_subscribe }}
-					</{{settings.region_tag_mitor_footer_subscribe}}>
-                    {% endif %}
-					
-                    {% if content.mitor_footer_subscribe_text %}
-                    <div {{ region_attributes.mitor_footer_subscribe_text.addClass(['description']) }}>
-						<p>{{ content.mitor_footer_subscribe_text }}</p>
+			<div class="container">
+				<div class="row ff-content">
+					<div class="col-lg-3 col-md-5 footer-column">
+						{% if content.mitor_footer_site_logo %}
+							<div {{ region_attributes.mitor_footer_site_logo.addClass(['img-logo']) }}>
+								{{ content.mitor_footer_site_logo }}
+							</div>
+						{% endif %}
+						{% if content.mitor_footer_description %}
+							<div {{ region_attributes.mitor_footer_description.addClass(['mc-description']) }}>
+								{{ content.mitor_footer_description }}
+							</div>
+						{% endif %}
+						{% if content.mitor_footer_social %}
+							<div {{ region_attributes.mitor_footer_social.addClass(['social-bloc']) }}>
+								{{ content.mitor_footer_social }}
+							</div>
+						{% endif %}
 					</div>
-                    {% endif %}
-					
-                    {% if content.mitor_footer_subscribe_form %}
-                    <div {{ region_attributes.mitor_footer_subscribe_form.addClass(['email-form']) }}>
-						{{ content.mitor_footer_subscribe_form }}
+					<div class="col-lg-3 col-md-5 footer-column">
+						{% if content.mitor_footer_column1_title %}
+							<{{settings.region_tag_mitor_footer_column1_title}} {{ region_attributes.mitor_footer_column1_title.addClass(['head-element']) }}>
+								{{ content.mitor_footer_column1_title }}
+							</{{settings.region_tag_mitor_footer_column1_title}}>
+						{% endif %}
+						{% if content.mitor_footer_column1_links %}
+							<div {{ region_attributes.mitor_footer_column1_links.addClass(['links']) }}>
+								{{ content.mitor_footer_column1_links }}
+							</div>
+						{% endif %}
 					</div>
-                    {% endif %}
-					
+					<div class="col-lg-3 col-md-5 footer-column">
+						{% if content.mitor_footer_column2_title %}
+							<{{settings.region_tag_mitor_footer_column2_title}} {{ region_attributes.mitor_footer_column2_title.addClass(['head-element']) }}>
+								<p>{{ content.mitor_footer_column2_title }}</p>
+							</{{settings.region_tag_mitor_footer_column2_title}}>
+						{% endif %}
+
+						{% if content.mitor_footer_column2_links %}
+							<div {{ region_attributes.mitor_footer_column2_links.addClass(['links']) }}>
+								{{ content.mitor_footer_column2_links }}
+							</div>
+						{% endif %}
+					</div>
+					<div class="col-lg-3 col-md-5 footer-column">
+						{% if content.mitor_footer_subscribe %}
+							<{{settings.region_tag_mitor_footer_subscribe}} {{ region_attributes.mitor_footer_subscribe.addClass(['head-element']) }}>
+								{{ content.mitor_footer_subscribe }}
+							</{{settings.region_tag_mitor_footer_subscribe}}>
+						{% endif %}
+						{% if content.mitor_footer_subscribe_text %}
+							<div {{ region_attributes.mitor_footer_subscribe_text.addClass(['description']) }}>
+								{{ content.mitor_footer_subscribe_text }}
+							</div>
+						{% endif %}
+						{% if content.mitor_footer_subscribe_form %}
+							<div {{ region_attributes.mitor_footer_subscribe_form.addClass(['email-form']) }}>
+								{{ content.mitor_footer_subscribe_form }}
+							</div>
+						{% endif %}
+					</div>
 				</div>
 			</div>
-		</div>	
-		</div>	
-			
-			
-			
-			
-			
-			
-			
-		<div class="mitor-footer-last">	
-		<div class="container">
-			<div class="copyright text-center row">
-				{% if content.mitor_footer_copyright %}
-					<div {{ region_attributes.mitor_footer_copyright.addClass(['col-md-4', 'pb-5', 'p-sm-0', 'text-left']) }}>
-						{{ content.mitor_footer_copyright }}
+			{# footer middle goes there #}
+			<div class=" footer-middle">
+				<div class="container">
+					<div class="row fm-content">
+						<div class="col-lg-3 col-md-5 footer-column">
+							{% if content.mitor_footer_site_brand %}
+								<h5 {{ region_attributes.mitor_footer_site_brand.addClass(['head-element','h5']) }}>
+									{{ content.mitor_footer_site_brand }}
+								</h5>
+							{% endif %}
+							{% if content.mitor_footer_description_one %}
+								<div {{ region_attributes.mitor_footer_description_one.addClass(['mc-description']) }}>
+									{{ content.mitor_footer_description_one }}
+								</div>
+							{% endif %}
+							<ul class="contact-elements">
+								{% if content.mitor_footer_social_links_one %}
+									{% for item in content.mitor_footer_social_links_one|array_elements(region_attributes.mitor_footer_social_links_one.addClass('element')) %}
+										{{ item }} 
+									{% endfor %}
+								{% endif %}
+							</ul>
+						</div>
+						<div class="col-lg-3 col-md-5 footer-column">
+							{% if content.mitor_footer_column1_title_one %}
+								<h5 {{ region_attributes.mitor_footer_column1_title_one.addClass(['head-element','h5']) }}>
+									{{ content.mitor_footer_column1_title_one }}
+								</h5>
+							{% endif %}
+							{#% if content.mitor_footer_column1_links_one %}
+								<div {{ region_attributes.mitor_footer_column1_links_one.addClass(['links']) }}>
+									{{ content.mitor_footer_column1_links_one }}
+								</div>
+							{% endif %#}
+							<div class="links">
+								{% if content.mitor_footer_column1_links_one %}
+									{% for item in content.mitor_footer_column1_links_one|array_elements(region_attributes.mitor_footer_column1_links_one.addClass('link')) %}
+										{{ item }} 
+									{% endfor %}
+								{% endif %}
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-5 footer-column">
+							{% if content.mitor_footer_column2_title_one %}
+								<h5 {{ region_attributes.mitor_footer_column2_title_one.addClass(['head-element','h5']) }}>
+									{{ content.mitor_footer_column2_title_one }}
+								</h5>
+							{% endif %}
+							<div class="links">
+								{% if content.mitor_footer_column2_links_one %}
+									{% for item in content.mitor_footer_column2_links_one|array_elements(region_attributes.mitor_footer_column2_links_one.addClass('link')) %}
+										{{ item }} 
+									{% endfor %}
+								{% endif %}
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-5 footer-column">
+							{% if content.mitor_footer_column3_title_one %}
+								<h5 {{ region_attributes.mitor_footer_column3_title_one.addClass(['head-element','h5']) }}>
+									{{ content.mitor_footer_column3_title_one }}
+								</h5>
+							{% endif %}
+							<div class="gallery-img">
+								{% if content.teaser_container %}
+									{% for item in content.teaser_container|array_elements(region_attributes.teaser_container.addClass('post-img')) %}
+										{{ item }} 
+									{% endfor %}
+								{% endif %}
+							</div>
+						</div>
 					</div>
-				{% endif %}
-				{% if content.mitor_footer_term %}
-					<div {{ region_attributes.mitor_footer_term.addClass(['col-md-8', 'd-flex', 'align-items-end']) }}>
-						{{ content.mitor_footer_term }}
-					</div>
-				{% endif %}
-			</div>
+				</div>
+			</div>	
 		</div>
+		{# footer last goes there #}
+		<div class="mitor-footer-last">	
+			<div class="container">
+				<div class="copyright text-center row">
+					{% if content.mitor_footer_copyright %}
+						<div {{ region_attributes.mitor_footer_copyright.addClass(['col-md-4', 'pb-5', 'p-sm-0', 'text-left']) }}>
+							{{ content.mitor_footer_copyright }}
+						</div>
+					{% endif %}
+					{% if content.mitor_footer_term %}
+						<div {{ region_attributes.mitor_footer_term.addClass(['col-md-8', 'd-flex', 'align-items-end']) }}>
+							{{ content.mitor_footer_term }}
+						</div>
+					{% endif %}
+				</div>
+			</div>
 		</div>
 	</footer>
 {% endif %}
