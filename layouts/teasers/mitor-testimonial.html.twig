@@ -1,8 +1,15 @@
 {% if content %}
 	<div {{ attributes.addClass('single-testimonial') }}>
 		{% if content.mitor_testimonial_image %}
-			<div {{ region_attributes.mitor_testimonial_image.addClass(['img-handler']) }}>
-				{{ content.mitor_testimonial_image }}
+			<div class="img-handler">
+				{% if content.mitor_testimonial_image %}
+					{{ content.mitor_testimonial_image }}
+				{% endif %}
+				<a href="#" class="social-link">
+					{% if content.mitor_testimonial_image_svg %}
+						{{ content.mitor_testimonial_image_svg }}
+					{% endif %}
+                </a>
 			</div>
 		{% endif %}
 		<div class="testimony-handler">

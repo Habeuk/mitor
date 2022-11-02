@@ -6,17 +6,46 @@
 					{% if content.all_posts %}
 						{{ content.all_posts }}
 					{% endif %}
-
+					<div {{ attributes.addClass('simple-card')}}>
+						<div class="simple-card__img">
+							<div class="blog-date">
+								{% if content.card_date %}
+									<span {{ region_attributes.card_date.addClass('date')}}>
+										{{ content.card_date }}
+									</span>
+								{% endif %}
+								{% if content.card_month %}
+									<span {{ region_attributes.card_month.addClass('month')}}>
+										{{ content.card_month }}
+									</span>
+								{% endif %}
+							</div>
+							{% if content.card_image %}
+								<div {{ region_attributes.card_image.addClass('')}}>
+									{{ content.card_image}}
+								</div>
+							{% endif %}
+						</div>
+						<div class="simple-card__body">
+							{% if content.card_title %}
+								<h5 {{ region_attributes.card_title.addClass('sc-title')}}>
+									{{ content.card_title}}
+								</h5>
+							{% endif %}
+							{% if content.card_description %}
+								<div {{ region_attributes.card_description.addClass('sc-desc')}}>
+									{{ content.card_description }}
+								</div>
+							{% endif %}
+						</div>
+					</div>
 				</div>
 				<div class="col-lg-5">
 					<aside class="right-side-wrap">
 						<div class="sidebar-widget search-widget">
-							<div class="input-group mycustom">
-								<input type="text" placeholder="Keyword..." class="input outline-0 form-control" id="" required>
-							</div>
-							<div class="input-group-prepend">
-								<button class="btn btn-primary btn-sm px-5">Search</button>
-							</div>
+							{% if content.search %}
+								{{ content.search }}
+							{% endif %}
 						</div>
 						<div class="sidebar-widget recent-post">
 							{% if content.first_container_title %}

@@ -31,8 +31,10 @@ use Drupal\formatage_models\Plugin\Layout\Teasers\FormatageModelsTeasers;
  *      },
  *      "mitor_testimonial_rating" = {
  *       "label" = @Translation("mitor testimonial rating")
- *      }
- *      
+ *      },
+ *      "mitor_testimonial_image_svg" = {
+ *       "label" = @Translation("mitor testimonial image svg")
+ *      } 
  *  }
  * )
  */
@@ -76,7 +78,8 @@ use Drupal\formatage_models\Plugin\Layout\Teasers\FormatageModelsTeasers;
                 'value' => 'simple',
                 'options' => [
                     'single-testimonial' => 'simple',
-                    'single-testimonial--flex' => 'flat'
+                    'single-testimonial--flex' => 'flex',
+                    'single-testimonial--skeumorphisme' => 'skeumorphism'
                 ],
             ],
             'content' => [
@@ -90,6 +93,16 @@ use Drupal\formatage_models\Plugin\Layout\Teasers\FormatageModelsTeasers;
                         'text_html' => [
                             'label' => 'image du temoignage',
                             'value' => '<img src="http://slidesigma.com/themes/html/mitor/assets/img/homepage-1/testimonial-2.jpg" alt="" class="img-back">',
+                        ]
+                    ],
+                    'mitor_testimonial_image_svg' => [
+                        'text_html' => [
+                            'label' => 'Image Svg',
+                            'value' => '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="15" height="15"
+                                                preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32">
+                                            <path
+                                                    d="M31.937 6.093a13.359 13.359 0 0 1-3.765 1.032a6.603 6.603 0 0 0 2.885-3.631a13.683 13.683 0 0 1-4.172 1.579a6.56 6.56 0 0 0-11.178 5.973c-5.453-.255-10.287-2.875-13.52-6.833a6.458 6.458 0 0 0-.891 3.303a6.555 6.555 0 0 0 2.916 5.457a6.518 6.518 0 0 1-2.968-.817v.079a6.567 6.567 0 0 0 5.26 6.437a6.758 6.758 0 0 1-1.724.229c-.421 0-.823-.041-1.224-.115a6.59 6.59 0 0 0 6.14 4.557a13.169 13.169 0 0 1-8.135 2.801a13.01 13.01 0 0 1-1.563-.088a18.656 18.656 0 0 0 10.079 2.948c12.067 0 18.661-9.995 18.661-18.651c0-.276 0-.557-.021-.839a13.132 13.132 0 0 0 3.281-3.396z" />
+                                        </svg>',
                         ]
                     ],
                     'mitor_testimonial_message' => [
