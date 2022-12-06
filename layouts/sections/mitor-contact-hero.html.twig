@@ -8,13 +8,13 @@
 		<div class="titles-handler">
 			{% if content.mitor_title %}
                 <h1 {{ region_attributes.mitor_title.addClass(['title']) }}>
-                    {{ content. }}
+                    {{ content.mitor_title }}
                 </h1>
             {% endif %}
 			<ul class="title-desc">
                 {% if content.mitor_element %}
                     <li {{ region_attributes.mitor_element.addClass(['parent-route']) }}>
-                        {{ containt. }}
+                        {{ content.mitor_element }}
                     </li>
                 {% endif %}
 			</ul>
