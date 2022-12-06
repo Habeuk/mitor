@@ -30,7 +30,7 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
     
     /**
      * {@inheritdoc}
-     * @see Drupal\formatage_models\Plugin\Layout\FormatageModels::_construct
+     * @see \Drupal\formatage_models\Plugin\Layout\FormatageModels::_construct
      */
     public function __construct(array $configuration, $pludin_id, $plugin_definition, StylesGroupManager $styleGroupManager)
     {
@@ -41,7 +41,7 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
 
     /**
      * {@inheritdoc}
-     * @see Drupal\formatage_models\Plugin\Layout\FormatageModels::build
+     * @see \Drupal\formatage_models\Plugin\Layout\FormatageModels::build
      */
     public function build(array $regions)
     {

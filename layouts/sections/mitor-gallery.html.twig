@@ -1,9 +1,7 @@
 {% if content %}
-	<div {{ attributes.addClass('mitor-grid-img') }} {{ attibutes.addId('mitor-top-project') }}>
-
-		{% if content.mitor_gallery_images %}
-			{{ content.mitor_gallery_images }}
-		{% endif %}
-
+	<div {{ attributes.addClass('mitor-grid-img') }}>
+		{% for item in content.mitor_gallery_images|array_elements(region_attributes.mitor_gallery_images.addClass('grid-item')) %}
+    	   {{ item }} 
+    	{% endfor %}
 	</div>
 {% endif %}
