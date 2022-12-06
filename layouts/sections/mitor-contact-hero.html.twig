@@ -1,9 +1,15 @@
 {% if content %}
-	<section {{ attributes.addClass('mitor-contact-hero') }} 
-    {% if content.mitor_background_image %} style=" background-image: url('{{ content.mitor_background_image }}')">
+    {% if content.mitor_background_image.layout_builder_add_block %}
+		{{ content.mitor_background_image }}
+	{% endif %}
+	{% if content.mitor_background_image|layout_bg_img %}
+		{% set attributes = attributes.merge(content.mitor_background_image|layout_bg_img) %}
+	{% endif %}
+	<section {{ attributes.addClass('mitor-contact-hero') }}>
+    {#% if content.mitor_background_image %} style=" background-image: url('{{ content.mitor_background_image }}')">
 		{% else %}
         style=" background-image: url('http://slidesigma.com/themes/html/mitor/assets/img/coming-soon/banner-3.jpg')">
-	{% endif %}
+	{% endif %#}
 	<div class="container">
 		<div class="titles-handler">
 			{% if content.mitor_title %}
