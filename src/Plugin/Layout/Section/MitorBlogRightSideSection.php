@@ -55,6 +55,15 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
  *      "card_description" = {
  *       "label" = @Translation("mitor blog left side card description"),
  *      },
+ *      "comments" = {
+ *       "label" = @Translation("mitor comments"),
+ *      },
+ *      "user" = {
+ *       "label" = @Translation("mitor user"),
+ *      },
+ *      "tags" = {
+ *       "label" = @Translation("mitor tags region"),
+ *      },
  *  }
  * )
  */
@@ -176,6 +185,24 @@ class MitorBlogRightSideSection extends FormatageModelsSection
                     'card_description' => [
                         'text' => [
                             'label' => 'description',
+                            'value' => '',
+                        ]
+                    ],
+                    'comments' => [
+                        'text' => [
+                            'label' => 'Comments',
+                            'value' => '',
+                        ]
+                    ],
+                    'user' => [
+                        'text' => [
+                            'label' => 'User',
+                            'value' => '',
+                        ]
+                    ],
+                    'tags' => [
+                        'text' => [
+                            'label' => 'Tag',
                             'value' => '',
                         ]
                     ],

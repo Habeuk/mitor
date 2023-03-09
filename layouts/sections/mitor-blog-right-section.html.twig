@@ -2,45 +2,64 @@
 	<section {{ attributes.addClass('mitor-blogs-section-handler') }}>
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-7">
+				<div class="col-lg-8">
 					{% if content.all_posts %}
 						{{ content.all_posts }}
 					{% endif %}
-					<div {{ attributes.addClass('simple-card')}}>
-						<div class="simple-card__img">
-							<div class="blog-date">
-								{% if content.card_date %}
-									<span {{ region_attributes.card_date.addClass('date')}}>
-										{{ content.card_date }}
-									</span>
-								{% endif %}
-								{% if content.card_month %}
-									<span {{ region_attributes.card_month.addClass('month')}}>
-										{{ content.card_month }}
-									</span>
+					{% if content.card_date|has_value or content.card_month|has_value or content.card_image|has_value or content.card_title|has_value or content.card_description|has_value %}
+						<div {{ attributes.addClass('simple-card')}}>
+							<div class="simple-card__img">
+								<div class="blog-date">
+									{% if content.card_date %}
+										<span {{ region_attributes.card_date.addClass('date')}}>
+											{{ content.card_date }}
+										</span>
+									{% endif %}
+									{% if content.card_month %}
+										<span {{ region_attributes.card_month.addClass('month')}}>
+											{{ content.card_month }}
+										</span>
+									{% endif %}
+								</div>
+								{% if content.card_image %}
+									<div {{ region_attributes.card_image.addClass('')}}>
+										{{ content.card_image}}
+									</div>
 								{% endif %}
 							</div>
-							{% if content.card_image %}
-								<div {{ region_attributes.card_image.addClass('')}}>
-									{{ content.card_image}}
-								</div>
-							{% endif %}
+							<div class="simple-card__body">
+								{% if content.card_title %}
+									<h5 {{ region_attributes.card_title.addClass('sc-title')}}>
+										{{ content.card_title}}
+									</h5>
+								{% endif %}
+								{% if content.card_description %}
+									<div {{ region_attributes.card_description.addClass('sc-desc')}}>
+										{{ content.card_description }}
+									</div>
+								{% endif %}
+
+								{% if content.tags|has_value %}
+									{% for item in content.tags|array_elements(region_attributes.tags.addClass('badge badge-primary')) %}
+										{{ item }}
+									{% endfor %}
+								{% endif %}
+
+							</div>
 						</div>
-						<div class="simple-card__body">
-							{% if content.card_title %}
-								<h5 {{ region_attributes.card_title.addClass('sc-title')}}>
-									{{ content.card_title}}
-								</h5>
-							{% endif %}
-							{% if content.card_description %}
-								<div {{ region_attributes.card_description.addClass('sc-desc')}}>
-									{{ content.card_description }}
-								</div>
-							{% endif %}
-						</div>
-					</div>
+					{% endif %}
+
+					{% if content.user|has_value %}
+						{{ content.user }}
+					{% endif %}
+
+					{% if content.comments|has_value %}
+						{{ content.comments }}
+					{% endif %}
+
+
 				</div>
-				<div class="col-lg-5">
+				<div class="col-lg-4">
 					<aside class="right-side-wrap">
 						<div class="sidebar-widget search-widget">
 							{% if content.search %}
@@ -57,8 +76,8 @@
 							{% endif %}
 							<div class="elements">
 								{% if content.first_container %}
-                                    {{ content.first_container }}
-                                {% endif %}
+									{{ content.first_container }}
+								{% endif %}
 							</div>
 						</div>
 						<div class="sidebar-widget recent-post">
@@ -71,8 +90,8 @@
 							{% endif %}
 							<div class="elements">
 								{% if content.second_container %}
-                                    {{ content.second_container }}
-                                {% endif %}
+									{{ content.second_container }}
+								{% endif %}
 							</div>
 						</div>
 						<div class="sidebar-widget categories">
@@ -85,8 +104,8 @@
 							{% endif %}
 							<div class="elements">
 								{% if content.third_container %}
-                                    {{ content.third_container }}
-                                {% endif %}
+									{{ content.third_container }}
+								{% endif %}
 							</div>
 						</div>
 					</aside>
