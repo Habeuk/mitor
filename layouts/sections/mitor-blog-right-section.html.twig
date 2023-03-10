@@ -29,9 +29,9 @@
 							</div>
 							<div class="simple-card__body">
 								{% if content.card_title %}
-									<h5 {{ region_attributes.card_title.addClass('sc-title')}}>
+									<h1 {{ region_attributes.card_title.addClass('sc-title')}}>
 										{{ content.card_title}}
-									</h5>
+									</h1>
 								{% endif %}
 								{% if content.card_description %}
 									<div {{ region_attributes.card_description.addClass('sc-desc')}}>
@@ -40,7 +40,7 @@
 								{% endif %}
 
 								{% if content.tags|has_value %}
-									{% for item in content.tags|array_elements(region_attributes.tags.addClass('badge badge-primary')) %}
+									{% for item in content.tags|array_elements(region_attributes.tags.addClass('badge badge-pill badge-primary')) %}
 										{{ item }}
 									{% endfor %}
 								{% endif %}
