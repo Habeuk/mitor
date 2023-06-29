@@ -1,20 +1,16 @@
 {% if content %}
-	<section {{ attributes.addClass('mitor-contact-hero') }} 
-    {% if content.mitor_background_image %} style=" background-image: url('{{ content.mitor_background_image }}')">
-		{% else %}
-        style=" background-image: url('http://slidesigma.com/themes/html/mitor/assets/img/coming-soon/banner-3.jpg')">
-	{% endif %}
+	<section {{ attributes.addClass('mitor-contact-hero') }}  style="background-image: url('{{ content.mitor_background_image }}')">	
 	<div class="container">
 		<div class="titles-handler">
 			{% if content.mitor_title %}
-                <h1 {{ region_attributes.mitor_title.addClass(['title']) }}>
-                    {{ content. }}
-                </h1>
+                <h3 {{ region_attributes.mitor_title.addClass(['title']) }}>
+                    {{ content.mitor_title }}
+                </h3>
             {% endif %}
 			<ul class="title-desc">
                 {% if content.mitor_element %}
                     <li {{ region_attributes.mitor_element.addClass(['parent-route']) }}>
-                        {{ containt. }}
+                        {{ containt.mitor_element }}
                     </li>
                 {% endif %}
 			</ul>
