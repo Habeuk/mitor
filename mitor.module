@@ -3,17 +3,51 @@
 /**
  * Implements hook_theme().
  */
-function mitor_theme() {
+function mitor_theme()
+{
     return [
         'image_gallery_item_formatter' => [
-            'variables' => ['imageurl' => NULL,'imageThumbnailUrl' => NULL,'alt' => NULL],
+            'variables' => ['imageurl' => NULL, 'imageThumbnailUrl' => NULL, 'alt' => NULL],
             'file' => 'image.field.inc',
             'template' => 'mitor-image-gallery-item',
         ],
         'mitor_image_project_gallery_item' => [
-            'variables' => ['imageurl' => NULL,'imageThumbnailUrl' => NULL,'alt' => NULL],
+            'variables' => ['imageurl' => NULL, 'imageThumbnailUrl' => NULL, 'alt' => NULL],
             'file' => 'image.field.inc',
             'template' => 'mitor-image-project-gallery-item',
         ],
     ];
-  }
+}
+
+
+function mitor_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id)
+{
+    if ($form_id == "search_block_form") {
+        $form["actions"]["#attributes"]["class"][] = "btn btn-primary btn-sm px-5";
+        $mitorInput = [
+            "#type" => "html_tag",
+            "#tag" => "div",
+            "#attributes" => [
+                "class" => ["input-group", "mycustom"]
+            ],
+            [
+                $form["keys"],
+            ],
+        ];
+        $mitorAction = [
+            "#type" => "html_tag",
+            "#tag" => "div",
+            "#attributes" => [
+                "class" => ["input-group-prepend"]
+            ],
+            [
+                $form["actions"],
+            ],
+        ];
+        $form["input_mitor"] = $mitorInput;
+        $form["action_mitor"] = $mitorAction;
+        unset($form["keys"]);
+        unset($form["actions"]);
+        //dump($form);
+    }
+}

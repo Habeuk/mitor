@@ -1,19 +1,20 @@
 {% if content %}
-	<section {{ attributes.addClass('mitor-contact-hero') }}  style="background-image: url('{{ content.mitor_background_image }}')">	
-	<div class="container">
-		<div class="titles-handler">
-			{% if content.mitor_title %}
-                <h3 {{ region_attributes.mitor_title.addClass(['title']) }}>
-                    {{ content.mitor_title }}
-                </h3>
-            {% endif %}
-			<ul class="title-desc">
-                {% if content.mitor_element %}
-                    <li {{ region_attributes.mitor_element.addClass(['parent-route']) }}>
-                        {{ containt.mitor_element }}
-                    </li>
-                {% endif %}
-			</ul>
+	<section {{ attributes.addClass('mitor-contact-hero') }} style="background-image: url('{{ content.mitor_background_image }}')">
+		<div class="container">
+			<div class="titles-handler">
+				{% if content.mitor_title %}
+					<h3 {{ region_attributes.mitor_title.addClass(['title']) }}>
+						{{ content.mitor_title }}
+					</h3>
+				{% endif %}
+				<ul class="title-desc">
+					{% if content.mitor_element %}
+						<li {{ region_attributes.mitor_element.addClass(['parent-route']) }}>
+							{{ containt.mitor_element }}
+						</li>
+					{% endif %}
+				</ul>
+			</div>
 		</div>
-	</div>
-</section>{% endif %}
+	</section>
+{% endif %}
