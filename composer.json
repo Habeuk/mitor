@@ -1,5 +1,5 @@
 {
-    "name": "justinonomo/mitor",
+    "name": "habeuk/mitor",
     "description": "A simple mitor template integration",
     "type": "drupal-custom-module",
     "require": {
