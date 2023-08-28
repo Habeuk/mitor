@@ -47,7 +47,6 @@ class DefaultLicensePlateWidget extends WidgetBase
         $elements = [];
 
         $elements['number_size'] = [
-            '#type' => 'number',
             '#type' => $this->t('Size of plate number textfield'),
             '#default_value' => $this->getSetting('number_size'),
             '#required' => TRUE,
@@ -56,7 +55,6 @@ class DefaultLicensePlateWidget extends WidgetBase
         ];
 
         $elements['code_size'] = [
-            '#type' => 'number',
             '#type' => $this->t('Size of plate code textfield'),
             '#default_value' => $this->getSetting('code_size'),
             '#required' => TRUE,
@@ -65,7 +63,6 @@ class DefaultLicensePlateWidget extends WidgetBase
         ];
 
         $elements['fieldset_state'] = [
-            '#type' => 'select',
             '#type' => $this->t('Fieldset default state'),
             '#options' => [
                 'open' => $this->t('Open'),
@@ -76,7 +73,6 @@ class DefaultLicensePlateWidget extends WidgetBase
         ];
 
         $elements['placeholder'] = [
-            '#type' => 'details',
             '#type' => $this->t('Placeholder'),
             '#description' => $this->t('Text that will be shown inside the field until a value is  entered. This hint is usually a sample value or a brief description of the expected format.')
         ];
@@ -106,8 +102,8 @@ class DefaultLicensePlateWidget extends WidgetBase
     {
         $summary = [];
         $summary = $this->t('License plate size: @number (for number) and @code (for code)', [
-            '@number' => $this->getSettings('number_size'),
-            '@code' => $this->getSettings('code_size'),
+            '@number' => $this->getSettings(),
+            '@code' => $this->getSettings(),
         ]);
 
         $placeholder_settings = $this->getSetting('placeholder');
@@ -121,7 +117,7 @@ class DefaultLicensePlateWidget extends WidgetBase
         }
 
         $summary[] = $this->t('Fieldset state: @state', [
-            '@state' => $this->getSettings('fieldset_state'),
+            '@state' => $this->getSettings(),
         ]);
 
         return $summary;
@@ -134,18 +130,18 @@ class DefaultLicensePlateWidget extends WidgetBase
     {
         $element['details'] = [
             '#type' => 'details',
-            '#tirle' => $element['#title'],
-            '#open' => $this->getSettings('fieldset_state') == 'open' ? TRUE : FALSE,
+            '#title' => $element['#title'],
+            '#open' => $this->getSettings() == 'open' ? TRUE : FALSE,
             '#description' => $element['#description'],
         ] + $element;
 
-        $placeholder_settings = $this->getSettings('placeholder');
+        $placeholder_settings = $this->getSettings();
 
         $element['details']['code'] = [
         '#type' => 'textfield',
         '#title' => $this->t('Place code'),
         '#default_value' => isset($items[$delta]->code) ? $items[$delta]->code : NULL,
-        '#size' => $this->getSettings('code_size'),
+        '#size' => $this->getSettings(),
         '#placeholder' => $placeholder_settings['code'],
         '#maxlength' => $this->getFieldSetting('code_max_length'),
         '#descripton' => '',
@@ -156,7 +152,7 @@ class DefaultLicensePlateWidget extends WidgetBase
         '#type' => 'textfield',
         '#title' => $this->t('Place number'),
         '#default_value' => isset($items[$delta]->number) ? $items[$delta]->number : NULL,
-        '#size' => $this->getSettings('number_size'),
+        '#size' => $this->getSettings(),
         '#placeholder' => $placeholder_settings['number'],
         '#maxlength' => $this->getFieldSetting('number_max_length'),
         '#descripton' => '',

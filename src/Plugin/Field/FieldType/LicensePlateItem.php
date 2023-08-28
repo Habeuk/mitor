@@ -44,9 +44,8 @@ class LicensePlateItem extends FieldItemBase
         $elements = [];
 
         $elements['number_max_length'] = [
-            '#tye' => 'number',
+            '#type' => 'number',
             '#title' => $this->t('Plate number maximum length'),
-            '#title' => $this->getSetting('number_max_length'),
             '#require' => true,
             '#description' => $this->t('Maximum length for the plate in characters.'),
             '#min' => 1,
@@ -56,7 +55,6 @@ class LicensePlateItem extends FieldItemBase
         $elements['code_max_length'] = [
             '#tye' => 'number',
             '#title' => $this->t('Plate code maximum length'),
-            '#title' => $this->getSetting('code_max_length'),
             '#require' => true,
             '#description' => $this->t('Maximum length for plate code in characters.'),
             '#min' => 1,

@@ -38,7 +38,7 @@ use Drupal\formatage_models\Plugin\Layout\Teasers\FormatageModelsTeasers;
     {
         // TODO auto-generated method stub
         parent::__construct($configuration, $pludin_id, $plugin_definition, $styleGroupManager);
-        $this->pluginDefinition->set('icon', drupal_get_path('module', 'mitor') . "/icons/teasers/mitor-why.png");
+        $this->pluginDefinition->set('icon', $this->pathResolver->getPath('module', 'mitor') . "/icons/teasers/mitor-why.png");
     }   
 
     /**
