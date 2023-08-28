@@ -3,7 +3,7 @@
     "description": "A simple mitor template integration",
     "type": "drupal-custom-module",
     "require": {
-        "stephane888/formatage_models": "dev-3x|^3.1"
+        "habeuk/formatage_models": "dev-3x|^3.1"
     },
     "license": "MIT",
     "authors": [
