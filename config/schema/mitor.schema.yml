@@ -9,7 +9,7 @@ field.widget.storage_setting.mitor:
       type: integer
       label: 'Max length for the code'
     fieldset_state:
-      type:string
+      type: string
       label: 'The state of the fieldset wich contains the two felds: open/closed'
     placeholder:
       type: maping
