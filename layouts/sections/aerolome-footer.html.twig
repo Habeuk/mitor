@@ -54,14 +54,9 @@
 							{% endif %}
 
 							{% if content.social_links|has_value %}
-								<ul>
-									{% for social_link in content.social_links|array_elements(region_attributes.social_links.addClass('')) %}
-										<li class="social-item">
-											{{ social_link }}
-										</li>
-									{% endfor %}
-
-								</ul>
+								<div>
+									{{ content.social_links }}
+								</div>
 							{% endif %}
 
 						</div>
