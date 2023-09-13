@@ -1,0 +1,82 @@
+{% if content %}
+	<footer {{ attributes.addClass('footer') }}>
+		<div class="container">
+
+			{% if content.newsletter|has_value or content.app|has_value or content.help|has_value %}
+				<div class="footer__row top-footer">
+					{% if content.newsletter|has_value %}
+						{{ content.newsletter }}
+					{% endif %}
+					{% if content.app|has_value %}
+						{{ content.app }}
+					{% endif %}
+					{% if content.help|has_value %}
+						{{ content.help }}
+					{% endif %}
+				</div>
+			{% endif %}
+
+			{% if content.logo|has_value or content.top_menu|has_value or content.sub_menus|has_value %}
+				<div class="footer__row middle-footer">
+					{% if content.logo or content.top_menu|has_value %}
+						<div class="middle-footer__top-menu">
+							{% if content.logo %}
+								{{ content.logo }}
+							{% endif %}
+
+							{% if content.top_menu|has_value %}
+								<nav class="top-menu" id="footer-menu">
+									<h3 class="sr-only">Menu pied de page</h3>
+
+									{{ content.top_menu }}
+
+								</nav>
+							{% endif %}
+						</div>
+					{% endif %}
+					{% if content.sub_menus %}
+						<nav class="middle-footer__sub-menu" id="footer-tablist" data-footer-tablist="" data-at-least-one="false">
+							<h3 class="sr-only">Menu secondaire</h3>
+							{{ content.sub_menus }}
+						{% endif %}
+
+					</div>
+				{% endif %}
+
+
+				{% if content.follow|has_value or content.social_links|has_value or content.copy|has_value %}
+					<div class="footer__row bottom-footer">
+						<div class="social-container">
+							{% if content.follow|has_value %}
+								<h5 {{ region_attributes.follow.addClass(['social-container__title', 'h6']) }}>
+									{{ content.follow }}
+								</h5>
+							{% endif %}
+
+							{% if content.social_links|has_value %}
+								<ul>
+									{% for social_link in content.social_links|array_elements(region_attributes.social_links.addClass('')) %}
+										<li class="social-item">
+											{{ social_link }}
+										</li>
+									{% endfor %}
+
+								</ul>
+							{% endif %}
+
+						</div>
+
+						{% if content.copy|has_value %}
+							<div {{ region_attributes.follow.addClass(['copyright-container']) }}>
+								{{ content.copy }}
+							</div>
+						{% endif %}
+
+					</div>
+				{% endif %}
+
+
+			</div>
+		</footer>
+
+	{% endif %}

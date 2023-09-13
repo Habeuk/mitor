@@ -82,3 +82,10 @@ mitor/salon-dessange-actu-section:
   css:
     theme:
       css/salon-dessange-actu-section.css: {}
+
+mitor/aerolome-footer:
+  js:
+    js/section/aerolome-footer.js: {}
+  css:
+    theme:
+      css/salon-dessange-actu-section.css: {}
