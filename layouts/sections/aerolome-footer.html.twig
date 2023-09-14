@@ -3,15 +3,21 @@
 		<div class="container">
 
 			{% if content.newsletter|has_value or content.app|has_value or content.help|has_value %}
-				<div class="footer__row top-footer">
+				<div class="footer__row top-footer mx-auto">
 					{% if content.newsletter|has_value %}
-						{{ content.newsletter }}
+						<div class="top-footer__item mx-auto">
+							{{ content.newsletter }}
+						</div>
 					{% endif %}
 					{% if content.app|has_value %}
-						{{ content.app }}
+						<div class="top-footer__item mx-auto">
+							{{ content.app }}
+						</div>
 					{% endif %}
 					{% if content.help|has_value %}
-						{{ content.help }}
+						<div class="top-footer__item mx-auto">
+							{{ content.help }}
+						</div>
 					{% endif %}
 				</div>
 			{% endif %}
@@ -21,7 +27,9 @@
 					{% if content.logo or content.top_menu|has_value %}
 						<div class="middle-footer__top-menu">
 							{% if content.logo %}
-								{{ content.logo }}
+								<a class="top-menu__logo" title="Retour à la page d'accueil" href="/">
+									{{ content.logo }}
+								</a>
 							{% endif %}
 
 							{% if content.top_menu|has_value %}
