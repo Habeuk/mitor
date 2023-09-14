@@ -193,6 +193,7 @@ class MenuLinksListBlock extends BlockBase implements ContainerFactoryPluginInte
     $menu_storage = $this->entityTypeManager->getStorage('menu_link_content');
     $menus = $menu_storage->loadByProperties(['menu_name' => $this->configuration['menu']]);
     $title = empty($this->configuration['title']) ? $this->configuration['menu'] : $this->configuration['title'];
+    $title = str_replace('-', $title, ' ');
     $build = [
       '#type' => 'html_tag',
       '#tag' => 'div',
