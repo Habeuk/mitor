@@ -23,6 +23,7 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
  *      
  *  }
  * )
+ * @depracted use more_field grid formatter on image instead 
  */
 
  class MitorGallerySection extends FormatageModelsSection
