@@ -11,6 +11,6 @@
   ],
   "minimum-stability": "dev",
   "require": {
-    "habeuk/formatage_models": "dev-4x|^4.1.34"
+    "drupal/formatage_models": "dev-4x|^4.1.34"
   }
 }
