@@ -66,11 +66,6 @@ class MitorFooter2Section extends FormatageModelsSection {
   public function build(array $regions) {
     // TODO auto-generated method stub
     $build = parent::build($regions);
-    $build['mitor_footer_site_logo'] = [
-      '#theme' => 'image_style',
-      '#style_name' => 'thumbnail',
-      '#uri' => theme_get_setting('logo.path')
-    ];
     // theme_get_setting('logo.url');
     FormatageModelsThemes::formatSettingValues($build);
     return $build;
